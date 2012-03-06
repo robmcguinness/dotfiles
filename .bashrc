@@ -52,3 +52,7 @@ export PS1="\n$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w
 # END CUSTOM PROMPT
 
 [ ! -f "$HOME/.bashrc.local" ] || . "$HOME/.bashrc.local"
+
+if [ -f `brew --prefix`/etc/autojump ]; then
+  . `brew --prefix`/etc/autojump
+fi
