@@ -16,11 +16,21 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
 
+# navigation
 alias ..='cd ..'
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
 alias ls='ls -la'
+
+# list directories
+alias lsd='ls -l | grep "^d"'
+
+# ip address
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
 
 
 #Generic Colouriser is a great utility which can be used for colourising many different types of output and log files
