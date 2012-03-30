@@ -21,7 +21,7 @@ alias ..='cd ..'
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
-alias ls='ls -la'
+alias ls='ls -lah'
 
 # list directories
 alias lsd='ls -l | grep "^d"'
