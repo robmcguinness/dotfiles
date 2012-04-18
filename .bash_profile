@@ -22,6 +22,7 @@ alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
 alias ls='ls -lah'
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # list directories
 alias lsd='ls -l | grep "^d"'
@@ -33,6 +34,7 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # git
 alias gc='git clone'
+alias gp='git pull'
 
 
 #Generic Colouriser is a great utility which can be used for colourising many different types of output and log files
