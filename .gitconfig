@@ -1,0 +1,20 @@
+[user]
+	name = robert mcguinness
+	email = robert.mcguinness.iii@gmail.com
+[color]
+	ui = auto
+[mergetool]
+	keepBackup = true
+[core]
+	editor = subl
+	whitespace = trailing-space,space-before-tab
+[advice]
+	pushNonFastForward = false
+[diff]
+	mnemonicprefix = true
+[merge]
+	stat = true
+[difftool]
+    prompt = false
+[difftool "Kaleidoscope"]
+    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"

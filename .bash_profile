@@ -36,6 +36,13 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias gc='git clone'
 alias gp='git pull'
 
+# Autocomplete for 'g' as well
+complete -o default -o nospace -F _git g
+
 
 #Generic Colouriser is a great utility which can be used for colourising many different types of output and log files
 source "`brew --prefix grc`/etc/grc.bashrc"
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
