@@ -38,6 +38,9 @@ defaults write com.apple.loginwindow LoginwindowLaunchesRelaunchApps -bool false
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# Disable press-and-hold for keys in favor of key repeat
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Empty Trash securely by default
 defaults write com.apple.finder EmptyTrashSecurely -bool true
 
@@ -58,6 +61,9 @@ defaults write com.apple.iTunes disablePing -bool true
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
+
+# Always open everything in Finder's list view. This is important.
+defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
 # Kill affected applications
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done

@@ -47,12 +47,3 @@ C_BG_LIGHTGRAY="\[\033[47m\]"
 # \W Current Working Directory
 # \w Full Path to Current Directory
 export PS1="\n$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w\n$C_DARKGRAY->$C_DEFAULT "
-
-
-# END CUSTOM PROMPT
-
-[ ! -f "$HOME/.bashrc.local" ] || . "$HOME/.bashrc.local"
-
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
