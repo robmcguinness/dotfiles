@@ -3,11 +3,25 @@ alias ..='cd ..'
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
-alias ls='ls -lah'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
+# process
+alias tm='ps -ef | grep'
+
 # list directories
-alias lsd='ls -l | grep "^d"'
+alias ls='ls -lah'
+alias lf='ls -Gl | grep ^d' # only list directories
+alias lsd='ls -Gal | grep ^d' # only list directories, including hidden ones
+
+# folders
+alias ds='du -ks *|sort -n' # find the biggest file or directory in the current directory.
+
+# system
+alias k9='kill -9'
+
+# memory
+alias wotgobblemem='ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -n -k 6 | tail -15'
+
 
 # ip address
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
