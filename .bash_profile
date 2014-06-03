@@ -16,10 +16,10 @@ if [[ -s /Users/robertmcguinness/.rvm/scripts/rvm ]] ; then
   source /Users/robertmcguinness/.rvm/scripts/rvm;
 fi
 
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+
+eval "$(jenv init -)"
