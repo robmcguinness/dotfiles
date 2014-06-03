@@ -12,9 +12,12 @@
 	pushNonFastForward = false
 [diff]
 	mnemonicprefix = true
+	tool = Kaleidoscope
 [merge]
 	stat = true
 [difftool]
-    prompt = false
+	prompt = false
 [difftool "Kaleidoscope"]
-    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[url "https://"]
+	insteadOf = git://
