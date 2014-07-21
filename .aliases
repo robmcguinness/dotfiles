@@ -40,3 +40,5 @@ alias gb='git branch'
 alias gco='git checkout'
 alias gra='git remote add'
 alias grr='git remote rm'
+
+alias cat='pygmentize -O style=monokai -f console256 -g'
