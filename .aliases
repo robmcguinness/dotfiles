@@ -8,6 +8,8 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 # process
 alias tm='ps -ef | grep'
 
+alias sourceme='source ~/.bash_profile'
+
 # list directories
 alias ls='ls -lah'
 alias lf='ls -Gl | grep ^d' # only list directories
@@ -21,7 +23,6 @@ alias k9='kill -9'
 
 # memory
 alias wotgobblemem='ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -n -k 6 | tail -15'
-
 
 # ip address
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -41,4 +42,8 @@ alias gco='git checkout'
 alias gra='git remote add'
 alias grr='git remote rm'
 
+# python
 alias cat='pygmentize -O style=monokai -f console256 -g'
+
+# tools
+alias json="python -m json.tool"

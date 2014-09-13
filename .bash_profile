@@ -4,7 +4,7 @@
 . "$HOME/.paths"
 . "$HOME/.aliases"
 
-
+ulimit -n 10240
 
 # Tell ls to be colourful
 export CLICOLOR=1

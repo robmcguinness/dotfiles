@@ -1,4 +1,8 @@
 # ~/.bashrc
+#
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
 # Store 10,000 history entries
 export HISTSIZE=10000
@@ -6,6 +10,13 @@ export HISTSIZE=10000
 export HISTCONTROL=erasedups
 # Append to history file
 shopt -s histappend
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+#command history will be saved for all terminals.
+export PROMPT_COMMAND='history -a'
 
 bind 'set bind-tty-special-chars off'
 bind '"\ep": history-search-backward'
@@ -38,6 +49,16 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
+if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+. /usr/local/git/contrib/completion/git-completion.bash
+fi
+
+if [ -f ~/git-prompt.sh ]; then
+  . ~/git-prompt.sh
+fi
+
+GIT_PS1_SHOWDIRTYSTATE=true
+
 # BEGIN CUSTOM PROMPT
 # \d Date
 # \h Host
@@ -46,4 +67,4 @@ C_BG_LIGHTGRAY="\[\033[47m\]"
 # \u Username
 # \W Current Working Directory
 # \w Full Path to Current Directory
-export PS1="\n$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w\n$C_DARKGRAY->$C_DEFAULT "
+export PS1="\n$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w $C_RED\$(__git_ps1) \n$C_DARKGRAY->$C_DEFAULT"
