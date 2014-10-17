@@ -3,36 +3,44 @@ alias ..='cd ..'
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
+alias h="cd ~"
+alias c="clear"
+alias l='ls -lah'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-# process
-alias tm='ps -ef | grep'
-
+# utils
+alias showa='cat ~/.aliases'
+alias showp='ps -ef | grep'
 alias sourceme='source ~/.bash_profile'
+alias k9='kill -9'
+alias hs='history | grep'
+alias sshkeys="tail +1 ~/.ssh/*.pub"
+
+# Get image dimensions
+# function dim(){ sips $1 -g pixelWidth -g pixelHeight }
+
+function mkcd () {
+  mkdir -p "$@" && cd "$@"
+}
+
+# unzips/tar/etc. by file extension
+alias extract='tar -xf'
 
 # list directories
-alias ls='ls -lah'
-alias lf='ls -Gl | grep ^d' # only list directories
-alias lsd='ls -Gal | grep ^d' # only list directories, including hidden ones
-
-# folders
-alias ds='du -ks *|sort -n' # find the biggest file or directory in the current directory.
-
-# system
-alias k9='kill -9'
-
-# memory
-alias wotgobblemem='ps -o time,ppid,pid,nice,pcpu,pmem,user,comm -A | sort -n -k 6 | tail -15'
+alias lsd='ls -l | grep "^d"'
 
 # ip address
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias ports='lsof -i -P | grep LISTEN'
 
 # git
 alias gc='git clone'
 alias gp='git pull'
-alias gl='git log'
+alias gpu='git push'
+alias gll='git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate'
+alias gl='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short'
 alias gs='git status'
 alias gd='git diff'
 alias gm='git commit -m'
@@ -41,6 +49,10 @@ alias gb='git branch'
 alias gco='git checkout'
 alias gra='git remote add'
 alias grr='git remote rm'
+# iterate through all git repos and show the url
+alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config --get remote.origin.url" \;'
+# iterate through all git repos and run `git pull`
+alias gua='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
 
 # python
 alias cat='pygmentize -O style=monokai -f console256 -g'
