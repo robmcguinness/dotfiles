@@ -11,7 +11,7 @@ alias tm='ps -ef | grep'
 alias sourceme='source ~/.bash_profile'
 
 # list directories
-alias ls='ls -lah'
+alias l='ls -lah'
 alias lf='ls -Gl | grep ^d' # only list directories
 alias lsd='ls -Gal | grep ^d' # only list directories, including hidden ones
 
@@ -34,6 +34,7 @@ alias gc='git clone'
 alias gp='git pull'
 alias gl='git log'
 alias gs='git status'
+alias gf='git fetch'
 alias gd='git diff'
 alias gm='git commit -m'
 alias gma='git commit -am'
@@ -41,6 +42,9 @@ alias gb='git branch'
 alias gco='git checkout'
 alias gra='git remote add'
 alias grr='git remote rm'
+
+alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config --get remote.origin.url" \;'
+alias gu='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
 
 # python
 alias cat='pygmentize -O style=monokai -f console256 -g'
