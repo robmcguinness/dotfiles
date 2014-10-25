@@ -6,6 +6,8 @@ alias ..4='cd ../../../..'
 alias h="cd ~"
 alias c="clear"
 alias l='ls -lah'
+alias lf='ls -Gl | grep ^d' # only list directories
+alias lsd='ls -Gal | grep ^d' # only list directories, including hidden ones
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # utils
@@ -15,9 +17,6 @@ alias sourceme='source ~/.bash_profile'
 alias k9='kill -9'
 alias hs='history | grep'
 alias sshkeys="tail +1 ~/.ssh/*.pub"
-
-# Get image dimensions
-# function dim(){ sips $1 -g pixelWidth -g pixelHeight }
 
 function mkcd () {
   mkdir -p "$@" && cd "$@"
@@ -42,6 +41,7 @@ alias gpu='git push'
 alias gll='git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate'
 alias gl='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short'
 alias gs='git status'
+alias gf='git fetch'
 alias gd='git diff'
 alias gm='git commit -m'
 alias gma='git commit -am'
@@ -56,6 +56,9 @@ alias gba='git branch -a'
 alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config --get remote.origin.url" \;'
 # iterate through all git repos and run `git pull`
 alias gua='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
+
+alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config --get remote.origin.url" \;'
+alias gu='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
 
 # python
 alias cat='pygmentize -O style=monokai -f console256 -g'
