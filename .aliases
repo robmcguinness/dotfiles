@@ -47,8 +47,11 @@ alias gm='git commit -m'
 alias gma='git commit -am'
 alias gb='git branch'
 alias gco='git checkout'
+alias gfo='git fetch origin'
 alias gra='git remote add'
 alias grr='git remote rm'
+alias gbr='git branch -r'
+alias gba='git branch -a'
 # iterate through all git repos and show the url
 alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config --get remote.origin.url" \;'
 # iterate through all git repos and run `git pull`
