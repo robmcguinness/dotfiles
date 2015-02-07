@@ -57,6 +57,12 @@ if [ -f ~/git-prompt.sh ]; then
   . ~/git-prompt.sh
 fi
 
+if [ -f "$HOME/.gvm/scripts/gvm" ]; then
+. ~/.gvm/scripts/gvm
+fi
+
+eval "$(pyenv init -)"
+
 GIT_PS1_SHOWDIRTYSTATE=true
 
 # BEGIN CUSTOM PROMPT
@@ -68,3 +74,4 @@ GIT_PS1_SHOWDIRTYSTATE=true
 # \W Current Working Directory
 # \w Full Path to Current Directory
 export PS1="\n$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w $C_RED\$(__git_ps1) \n$C_DARKGRAY->$C_DEFAULT"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
