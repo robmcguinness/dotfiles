@@ -49,6 +49,21 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
+# RVM
+if [[ -s /Users/robertmcguinness/.rvm/scripts/rvm ]] ; then
+  source /Users/robertmcguinness/.rvm/scripts/rvm;
+fi
+
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
+source "`brew --prefix`/etc/grc.bashrc"
+
+eval "$(jenv init -)"
+
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
 . /usr/local/git/contrib/completion/git-completion.bash
 fi
@@ -60,6 +75,10 @@ fi
 if [ -f "$HOME/.gvm/scripts/gvm" ]; then
 . ~/.gvm/scripts/gvm
 fi
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 
 eval "$(pyenv init -)"
 
