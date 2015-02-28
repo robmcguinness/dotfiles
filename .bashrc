@@ -50,37 +50,29 @@ C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
 # RVM
-if [[ -s /Users/robertmcguinness/.rvm/scripts/rvm ]] ; then
-  source /Users/robertmcguinness/.rvm/scripts/rvm;
+if [[ -s ~/.rvm/scripts/rvm ]] ; then
+  source ~/.rvm/scripts/rvm;
 fi
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
 fi
 
-source "`brew --prefix`/etc/grc.bashrc"
-
-eval "$(jenv init -)"
-
-if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
-. /usr/local/git/contrib/completion/git-completion.bash
+if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
+  . $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
 fi
 
-if [ -f ~/git-prompt.sh ]; then
-  . ~/git-prompt.sh
-fi
+# source "`brew --prefix`/etc/grc.bashrc"
+
+# eval "$(jenv init -)"
 
 if [ -f "$HOME/.gvm/scripts/gvm" ]; then
 . ~/.gvm/scripts/gvm
 fi
 
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
 GIT_PS1_SHOWDIRTYSTATE=true
 
@@ -93,4 +85,4 @@ GIT_PS1_SHOWDIRTYSTATE=true
 # \W Current Working Directory
 # \w Full Path to Current Directory
 export PS1="\n$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w $C_RED\$(__git_ps1) \n$C_DARKGRAY->$C_DEFAULT"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
