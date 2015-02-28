@@ -72,6 +72,8 @@ if [ -f "$HOME/.gvm/scripts/gvm" ]; then
 . ~/.gvm/scripts/gvm
 fi
 
+source ~/.nvm/nvm.sh
+
 # eval "$(pyenv init -)"
 
 GIT_PS1_SHOWDIRTYSTATE=true
