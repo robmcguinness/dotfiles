@@ -1,7 +1,6 @@
 # look in ect/paths as well
-
-. "$HOME/.bashrc"
 . "$HOME/.paths"
+. "$HOME/.bashrc"
 . "$HOME/.aliases"
 
 ulimit -n 10240
@@ -10,4 +9,3 @@ ulimit -n 10240
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export GREP_OPTIONS='--color=auto'
-source "`brew --prefix grc`/etc/grc.bashrc"
