@@ -88,3 +88,6 @@ GIT_PS1_SHOWDIRTYSTATE=true
 # \w Full Path to Current Directory
 export PS1="\n$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w $C_RED\$(__git_ps1) \n$C_DARKGRAY->$C_DEFAULT"
 
+
+# added by travis gem
+[ -f /Users/rmcguinness/.travis/travis.sh ] && source /Users/rmcguinness/.travis/travis.sh
