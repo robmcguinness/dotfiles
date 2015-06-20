@@ -58,10 +58,9 @@ fi
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
-fi
 
-if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
-  . $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+  __git_complete gp _git_pull
+  __git_complete gco _git_checkout
 fi
 
 # source "`brew --prefix`/etc/grc.bashrc"
