@@ -55,6 +55,9 @@ balias gra='git remote add'
 balias grr='git remote rm'
 balias gbr='git branch -r'
 balias gba='git branch -a'
+balias pubkey='pbcopy < ~/.ssh/id_rsa.pub'
+balias sf='source ~/.config/fish/config.fish'
+
 # iterate through all git repos and show the url
 balias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config --get remote.origin.url" \;'
 # iterate through all git repos and run `git pull`
@@ -75,7 +78,7 @@ function fish_user_key_bindings
 end
 
 # java
-set -x JAVA_HOME "/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home"
+set -x JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home
 set -gx JBOSS_HOME $HOME/jboss
 
 # browsers
@@ -83,8 +86,21 @@ set -x CHROME_BIN "/Users/rmcguinness/Applications/Google Chrome.app/Contents/Ma
 set -x FIREFOX_BIN "/Users/rmcguinness/Applications/Firefox.app/Contents/MacOS/firefox-bin"
 
 # For AXI builds
-# set -gx JAVA3_HOME /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
-# set -gx JAVA4_HOME /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
-# set -gx JAVA5_HOME /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
-# set -gx JAVA6_HOME /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+set -gx JAVA3_HOME /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+set -gx JAVA4_HOME /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+set -gx JAVA5_HOME /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+set -gx JAVA6_HOME /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+set -gs JAVA7_HOME /Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home
+
+set -gx GRADLE_OPTS "-Xmx1024m -Xms256m -XX:MaxPermSize=512m -XX:+CMSClassUnloadingEnabled -XX:+HeapDumpOnOutOfMemoryError"
+
+set -gx OCI_HOME /Users/rmcguinness/Dev/oracle
+set -gx OCI_LIB_DIR /Users/rmcguinness/Dev/oracle
+set -gx OCI_INCLUDE_DIR /Users/rmcguinness/Dev/oracle/sdk/include
+set -gx DYLD_LIBRARY_PATH /Users/rmcguinness/Dev/oracle
+
+
+
+
+
 

@@ -11,6 +11,6 @@ export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
-export CHROME_BIN="/Users/rmcguinness/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+export CHROME_BIN="/Users/rmcguinness/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 export FIREFOX_BIN="/Users/rmcguinness/Applications/Firefox.app/Contents/MacOS/firefox-bin"
 export EDITOR='subl -w'
