@@ -5,6 +5,8 @@ set PATH $PATH $HOME/Dev/homebrew/bin
 # rvm
 set PATH $PATH $HOME/.rvm/bin
 
+ulimit -n 8192
+
 # Path to your custom folder (default path is ~/.oh-my-fish/custom)
 #set fish_custom $HOME/dotfiles/oh-my-fish
 
@@ -41,7 +43,7 @@ balias sshkeys="tail +1 ~/.ssh/*.pub"
 balias gc='git clone'
 balias gp='git pull'
 balias gpu='git push'
-balias gll='git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate'
+balias gll='git log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]" --decorate'
 balias gl='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short'
 balias gs='git status -sb'
 balias gf='git fetch'
@@ -56,7 +58,7 @@ balias grr='git remote rm'
 balias gbr='git branch -r'
 balias gba='git branch -a'
 balias pubkey='pbcopy < ~/.ssh/id_rsa.pub'
-balias sf='source ~/.config/fish/config.fish'
+balias sourcme='source ~/.config/fish/config.fish'
 
 # iterate through all git repos and show the url
 balias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config --get remote.origin.url" \;'
