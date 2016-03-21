@@ -1,23 +1,16 @@
 [user]
-	name = robert mcguinness
-	email = robert.mcguinness.iii@gmail.com
-[color]
-	ui = auto
-[mergetool]
-	keepBackup = true
-[core]
-	editor = subl
-	whitespace = trailing-space,space-before-tab
-[advice]
-	pushNonFastForward = false
-[diff]
-	mnemonicprefix = true
-	tool = Kaleidoscope
+  name = Robert McGuinness
+  email = robert.mcguinness.iii@gmail.com
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustexitcode = true
 [merge]
-	stat = true
-[difftool]
-	prompt = false
+  tool = Kaleidoscope
 [difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-[url "https://"]
-	insteadOf = git://
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+  prompt = false
+[mergetool]
+  prompt = false
+[diff]
+  tool = Kaleidoscope
