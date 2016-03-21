@@ -12,7 +12,7 @@ alias lf='ls -Gl | grep ^d' # only list directories
 alias lsd='ls -Gal | grep ^d' # only list directories, including hidden ones
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-alias c='pygmentize -g'
+alias cat='pygmentize -O style=monokai -f console256 -g'
 
 alias k9='kill -9'
 alias hs='history | grep'
@@ -37,6 +37,8 @@ alias grr='git remote rm'
 alias gbr='git branch -r'
 alias gba='git branch -a'
 alias pubkey='pbcopy < ~/.ssh/id_rsa.pub'
+alias sourcme='source ~/.config/fish/config.fish'
+alias showa="cat ~/.config/fish/config.fish"
 
 # theme - fisher install hauleth/agnoster
 
@@ -44,6 +46,11 @@ alias pubkey='pbcopy < ~/.ssh/id_rsa.pub'
 alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config --get remote.origin.url" \;'
 # iterate through all git repos and run `git pull`
 alias gua='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
+
+# percol
+function fish_user_key_bindings
+  bind \cr percol_select_history
+end
 
 function nvm
   bass source ~/.nvm/nvm.sh ';' nvm $argv
