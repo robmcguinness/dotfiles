@@ -2,6 +2,7 @@ ulimit -n 8192
 
 set -Ux LSCOLORS gxfxcxdxbxegedabagacad
 
+alias j=z
 alias ..='cd ..'
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
@@ -12,7 +13,7 @@ alias lf='ls -Gl | grep ^d' # only list directories
 alias lsd='ls -Gal | grep ^d' # only list directories, including hidden ones
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-alias cat='pygmentize -O style=monokai -f console256 -g'
+alias dog='pygmentize -O style=monokai -f console256 -g'
 
 alias k9='kill -9'
 alias hs='history | grep'
@@ -38,19 +39,12 @@ alias gbr='git branch -r'
 alias gba='git branch -a'
 alias pubkey='pbcopy < ~/.ssh/id_rsa.pub'
 alias sourcme='source ~/.config/fish/config.fish'
-alias showa="cat ~/.config/fish/config.fish"
-
-# theme - fisher install hauleth/agnoster
+alias showa="dog ~/.config/fish/config.fish"
 
 # iterate through all git repos and show the url
 alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config --get remote.origin.url" \;'
 # iterate through all git repos and run `git pull`
 alias gua='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
-
-# percol
-function fish_user_key_bindings
-  bind \cr percol_select_history
-end
 
 function nvm
   bass source ~/.nvm/nvm.sh ';' nvm $argv
@@ -61,9 +55,28 @@ function md
   cd $argv
 end
 
-set fisher_home ~/.local/share/fisherman
-set fisher_config ~/.config/fisherman
-source $fisher_home/config.fish
+function gpp
+  cd $argv
+  gp
+  ..
+end
+
+function search
+  history | grep $argv | percol
+end
+
+# show remote git tags
+#
+#     ❯ gtr
+#     From https://robmcguinness@github.com/Availity/availity-ekko
+#     v1.0.0
+#     v1.0.1
+#     v1.1.0
+#     v1.2.0
+#
+function gtr
+  bass git ls-remote --tags | awk '{ print $2}' | sed -e 's;^refs/tags/;;' -e 's;\^{};;' | sort | uniq
+end
 
 # Fisher Plugins:
 
@@ -85,3 +98,14 @@ source $fisher_home/config.fish
 # * spin
 # * sublime
 # * z
+
+set fisher_home ~/.local/share/fisherman
+set fisher_config ~/.config/fisherman
+source $fisher_home/config.fish
+
+# docker
+
+set -gx DOCKER_TLS_VERIFY "1";
+set -gx DOCKER_HOST "tcp://192.168.99.100:2376";
+set -gx DOCKER_CERT_PATH "/Users/robertmcguinness/.docker/machine/machines/dev";
+set -gx DOCKER_MACHINE_NAME "dev";
