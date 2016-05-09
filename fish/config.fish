@@ -79,33 +79,15 @@ function gtr
 end
 
 # Fisher Plugins:
-
-#  agnoster
-# * bass
-# * bd
-# > bobthefish
-#   cmorrell
-# * debug
-#   fasd
-# * fishtape
-# * get
-# * grc
-#   hulk
-# * jump
-# * percol
-# * shark
-#   shellder
-# * spin
-# * sublime
-# * z
+# fisher edc/bass omf/grc debug z omf/sublime
 
 set fisher_home ~/.local/share/fisherman
 set fisher_config ~/.config/fisherman
 source $fisher_home/config.fish
 
-# docker
+# docker (use docker for mac)
 
-set -gx DOCKER_TLS_VERIFY "1";
-set -gx DOCKER_HOST "tcp://192.168.99.100:2376";
-set -gx DOCKER_CERT_PATH "/Users/robertmcguinness/.docker/machine/machines/dev";
-set -gx DOCKER_MACHINE_NAME "dev";
+# set -gx DOCKER_TLS_VERIFY "1";
+# set -gx DOCKER_HOST "tcp://192.168.99.100:2376";
+# set -gx DOCKER_CERT_PATH "/Users/robertmcguinness/.docker/machine/machines/dev";
+# set -gx DOCKER_MACHINE_NAME "dev";
