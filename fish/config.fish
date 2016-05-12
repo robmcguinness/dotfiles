@@ -79,7 +79,7 @@ function gtr
 end
 
 # Fisher Plugins:
-# fisher edc/bass omf/grc debug z omf/sublime rafaelrinaldi/pure
+# fisher edc/bass omf/grc debug z omf/sublime rafaelrinaldi/pure settitle
 
 set fisher_home ~/.local/share/fisherman
 set fisher_config ~/.config/fisherman
