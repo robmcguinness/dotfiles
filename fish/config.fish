@@ -79,7 +79,7 @@ function gtr
 end
 
 # Fisher Plugins:
-# fisher edc/bass omf/grc debug z omf/sublime rafaelrinaldi/pure settitle simple barnybug/docker-fish-completion
+# fisher edc/bass grc debug z omf/sublime rafaelrinaldi/pure settitle simple barnybug/docker-fish-completion fin
 
 set fisher_home ~/.local/share/fisherman
 set fisher_config ~/.config/fisherman
@@ -89,5 +89,5 @@ source $fisher_home/config.fish
 
 # set -gx DOCKER_TLS_VERIFY "1";
 # set -gx DOCKER_HOST "tcp://192.168.99.100:2376";
-# set -gx DOCKER_CERT_PATH "/Users/robertmcguinness/.docker/machine/machines/dev";
+# set -gx DOCKER_CERT_PATH "~/.docker/machine/machines/dev";
 # set -gx DOCKER_MACHINE_NAME "dev";
