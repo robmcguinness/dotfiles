@@ -1,6 +1,6 @@
 ulimit -n 8192
 
-set -Ux LSCOLORS gxfxcxdxbxegedabagacad
+# set -Ux LSCOLORS gxfxcxdxbxegedabagacad
 
 alias j=z
 alias ..='cd ..'
