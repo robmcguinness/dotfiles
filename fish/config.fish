@@ -1,6 +1,6 @@
 ulimit -n 8192
 
-set -Ux LSCOLORS gxfxcxdxbxegedabagacad
+# set -Ux LSCOLORS gxfxcxdxbxegedabagacad
 
 alias j=z
 alias ..='cd ..'
@@ -79,25 +79,7 @@ function gtr
 end
 
 # Fisher Plugins:
-
-#  agnoster
-# * bass
-# * bd
-# > bobthefish
-#   cmorrell
-# * debug
-#   fasd
-# * fishtape
-# * get
-# * grc
-#   hulk
-# * jump
-# * percol
-# * shark
-#   shellder
-# * spin
-# * sublime
-# * z
+# fisher edc/bass grc debug z omf/sublime rafaelrinaldi/pure settitle simple barnybug/docker-fish-completion fin
 
 set fisher_home ~/.local/share/fisherman
 set fisher_config ~/.config/fisherman

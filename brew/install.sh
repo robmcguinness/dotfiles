@@ -11,30 +11,26 @@ brew upgrade --all
 brew install coreutils
 ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
-
-brew install autojump
-brew install docker-compose
-brew install fasd
 brew install gettext
+brew install coreutils
+brew install curl
+brew install wget
 brew install git-flow-avh
 brew install grc
 brew install libyaml
 brew install openssl
 brew install readline
 brew install wget
-brew install docker-machine
 brew install fish
 brew install git
 brew install gnu-getopt
 brew install htop
 brew install node
 brew install pkg-config
-brew install docker
 brew install gdbm
 brew install git-extras
 brew install go
 brew install httpie
-brew install nvm
 brew install python
 brew install unar
 
