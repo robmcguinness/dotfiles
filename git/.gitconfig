@@ -2,19 +2,14 @@
 
   name = Robert McGuinness
   email = robert.mcguinness.iii@gmail.com
-[mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustexitcode = true
-[merge]
-  tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 [difftool]
   prompt = false
 [mergetool]
   prompt = false
-[diff]
-  tool = Kaleidoscope
 [color]
   ui = auto
 [color "branch"]
