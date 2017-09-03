@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+brew coreutils
+brew gettext
+brew coreutils
+brew curl
+brew wget
+brew git-flow-avh
+brew grc
+brew libyaml
+brew openssl
+brew readline
+brew wget
+brew fish
+brew git
+brew gnu-getopt
+brew htop
+brew node
+brew pkg-config
+brew gdbm
+brew git-extras
+brew go
+brew httpie
+brew python
+brew unar
