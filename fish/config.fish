@@ -38,8 +38,8 @@ alias grr='git remote rm'
 alias gbr='git branch -r'
 alias gba='git branch -a'
 alias pubkey='pbcopy < ~/.ssh/id_rsa.pub'
-alias sourcme='source ~/.config/fish/config.fish'
-alias showa="dog ~/.config/fish/config.fish"
+alias sourceme='source ~/.config/fish/config.fish'
+alias fishy="code ~/.config/fish/config.fish"
 
 # iterate through all git repos and show the url
 alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config --get remote.origin.url" \;'
@@ -58,7 +58,6 @@ end
 function gpp
   cd $argv
   gp
-  ..
 end
 
 function search
