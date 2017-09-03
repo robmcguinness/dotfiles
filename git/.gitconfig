@@ -1,15 +1,19 @@
 [user]
-
   name = Robert McGuinness
   email = robert.mcguinness.iii@gmail.com
+[core]
+  editor = code --wait
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]
     cmd = code --wait --diff $LOCAL $REMOTE
 [difftool]
   prompt = false
-[mergetool]
-  prompt = false
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+    prompt = false
 [color]
   ui = auto
 [color "branch"]
@@ -19,13 +23,33 @@
 [color "diff"]
   meta = yellow bold
   frag = magenta bold # line info
-  old = red # deletions
-  new = green # additions
+  old = red bold # deletions
+  new = green bold # additions
 [color "status"]
   added = yellow
   changed = green
   untracked = cyan
+[fetch]
+  prune = true
 [alias]
+
+
+  # View the current working tree status using the short format
+  s = status -s
+
+  # Show the diff between the latest commit and the current state
+  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+  # Pull in remote changes for the current repository and all its submodules
+  p = !"git pull; git submodule foreach git pull origin master"
+
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+
+  # List aliases
+  aliases = config --get-regexp alias
 
   # Git alias to push current branch to upstream branch of the same name
   pushup = "!gitbranchname() { git symbolic-ref --short HEAD; }; gitpushupstream() { git push --set-upstream origin `gitbranchname`; }; gitpushupstream"
@@ -51,5 +75,3 @@
   # Remove branches that have already been merged with master
   # a.k.a. ‘delete merged’
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-[core]
-	editor = code --wait
