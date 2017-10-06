@@ -12,7 +12,8 @@ fisherman/last_job_id
 fisherman/menu
 rafaelrinaldi/pure
 fisherman/settitle
-oh-my-fish/plugin-sublime
 oh-my-fish/plugin-tab
+oh-my-fish/plugin-percol
 fisherman/vault
+fisherman/cprintf
 fisherman/z
