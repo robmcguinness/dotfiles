@@ -38,8 +38,8 @@ alias grr='git remote rm'
 alias gbr='git branch -r'
 alias gba='git branch -a'
 alias pubkey='pbcopy < ~/.ssh/id_rsa.pub'
-alias sourcme='source ~/.config/fish/config.fish'
-alias showa="dog ~/.config/fish/config.fish"
+alias sourceme='source ~/.config/fish/config.fish'
+alias fishy="code ~/.config/fish/config.fish"
 
 # iterate through all git repos and show the url
 alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config --get remote.origin.url" \;'
@@ -58,7 +58,6 @@ end
 function gpp
   cd $argv
   gp
-  ..
 end
 
 function search
@@ -84,10 +83,3 @@ end
 set fisher_home ~/.local/share/fisherman
 set fisher_config ~/.config/fisherman
 source $fisher_home/config.fish
-
-# docker (use docker for mac)
-
-# set -gx DOCKER_TLS_VERIFY "1";
-# set -gx DOCKER_HOST "tcp://192.168.99.100:2376";
-# set -gx DOCKER_CERT_PATH "~/.docker/machine/machines/dev";
-# set -gx DOCKER_MACHINE_NAME "dev";
