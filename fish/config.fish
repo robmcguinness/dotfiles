@@ -1,6 +1,11 @@
 ulimit -n 8192
 
-# set -Ux LSCOLORS gxfxcxdxbxegedabagacad
+# Fisher Plugins:
+set fisher_home ~/.local/share/fisherman
+set fisher_config ~/.config/fisherman
+source $fisher_home/config.fish
+
+set -U EDITOR code
 
 alias j=z
 alias ..='cd ..'
@@ -46,40 +51,7 @@ alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config 
 # iterate through all git repos and run `git pull`
 alias gua='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
 
-function nvm
-  bass source ~/.nvm/nvm.sh ';' nvm $argv
-end
 
-function md
-  mkdir -p $argv
-  cd $argv
-end
 
-function gpp
-  cd $argv
-  gp
-end
 
-function search
-  history | grep $argv | percol
-end
 
-# show remote git tags
-#
-#     ❯ gtr
-#     From https://robmcguinness@github.com/Availity/availity-ekko
-#     v1.0.0
-#     v1.0.1
-#     v1.1.0
-#     v1.2.0
-#
-function gtr
-  bass git ls-remote --tags | awk '{ print $2}' | sed -e 's;^refs/tags/;;' -e 's;\^{};;' | sort | uniq
-end
-
-# Fisher Plugins:
-# fisher edc/bass grc debug z omf/sublime rafaelrinaldi/pure settitle simple barnybug/docker-fish-completion fin
-
-set fisher_home ~/.local/share/fisherman
-set fisher_config ~/.config/fisherman
-source $fisher_home/config.fish
