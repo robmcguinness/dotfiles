@@ -1,3 +1,3 @@
-function search --description 'Search shell history using percol'
-  history | grep $argv | percol
+function search --description 'Search shell history using fzf'
+  history | fzf $arg
 end

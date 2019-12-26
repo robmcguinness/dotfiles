@@ -1,3 +1,4 @@
 function nvm --description 'Node version manager'
-  bass source ~/.nvm/nvm.sh ';' nvm $argv
+  # --no-use to the end of the above script to postpone using nvm until used
+  bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
 end

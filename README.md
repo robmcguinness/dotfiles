@@ -1,19 +1,12 @@
-# dotfiles
+# 💻
 
-> Configurations files for the soul
+> macOS setup scripts for development
 
-![Terminal](http://f.cl.ly/items/3p1Q2V2U1o2j1I05052b/Image%202016-04-17%20at%2010.24.58%20PM.png)
+![optimus prime](8EEe.gif)
 
-## Installation
+## Thanks
 
-+ Clone repo
+Inspiration and code was taken from many sources, including:
 
-```bash
-git clone https://github.com/robmcguinness/dotfiles.git
-```
-
-+ Create a symbolic link for each dotfile in the cloned repo
-
-``` bash
-ln -s ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
-```
+- [minamarkham/formation](https://github.com/minamarkham/formation)
+- [aulirish/dotfiles](https://github.com/paulirish/dotfiles)

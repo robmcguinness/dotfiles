@@ -1,4 +1,4 @@
-function gpp --description 'Change directory and git pull'
+function gpp --description 'Change into directory and git pull'
   cd $argv
   gp
 end
