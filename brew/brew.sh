@@ -13,5 +13,4 @@ install_or_upgrade httpie
 install_or_upgrade fish
 
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package quicklookase
-brew cask install visual-studio-code
-
+brew cask install visual-studio-code open-in-code

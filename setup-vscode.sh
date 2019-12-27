@@ -30,6 +30,9 @@ setup_vscode() {
   formulahendry.auto-close-tag
   formulahendry.auto-rename-tag
   formulahendry.code-runner
+  foxundermoon.shell-format
+  hdevalke.rust-test-lens
+  jeff-hykin.better-shellscript-syntax
   mohsen1.prettify-json
   mrmlnc.vscode-remark
   ms-azuretools.vscode-docker
@@ -52,15 +55,13 @@ setup_vscode() {
   vittorioromeo.expand-selection-to-scope
   vscode-icons-team.vscode-icons
   wayou.vscode-todo-highlight
+  wix.vscode-import-cost
   wmaurer.change-case
   wmaurer.join-lines
   zhuangtongfa.material-theme"
 
-  # printf "$PLUGINS_TO_INSTALL"
-
   for i in ${PLUGINS_TO_INSTALL[@]}; do
-      code --install-extension "$i"
+    code --install-extension "$i"
   done
 }
 setup_vscode
-
