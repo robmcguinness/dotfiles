@@ -4,6 +4,11 @@
 
 ![optimus prime](8EEe.gif)
 
+## Setup
+
+- Clone this repo
+- Run `sh ./setup.sh`
+
 ## Thanks
 
 Inspiration and code was taken from many sources, including:
