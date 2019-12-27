@@ -14,3 +14,6 @@ install_or_upgrade fish
 
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package quicklookase
 brew cask install visual-studio-code open-in-code
+
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
