@@ -9,4 +9,4 @@
 Inspiration and code was taken from many sources, including:
 
 - [minamarkham/formation](https://github.com/minamarkham/formation)
-- [aulirish/dotfiles](https://github.com/paulirish/dotfiles)
+- [paulirish/dotfiles](https://github.com/paulirish/dotfiles)
