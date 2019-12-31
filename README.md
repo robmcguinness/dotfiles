@@ -2,7 +2,7 @@
 
 > macOS setup scripts for development
 
-![optimus prime](8EEe.gif)
+![optimus prime](optimus.gif)
 
 ## Setup
 
