@@ -11,8 +11,6 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # alias dog='pygmentize -O style=monokai -f console256 -g'
 
-alias k9='kill -9'
-alias hs='history | grep'
 alias sshkeys="tail +1 ~/.ssh/*.pub"
 
 # git
