@@ -9,6 +9,10 @@
 - Clone this repo
 - Run `sh ./setup.sh`
 
+## Manual Setup
+
+- Install latest [SourceCodeSyntaxHighlight](https://github.com/sbarex/SourceCodeSyntaxHighlight)
+
 ## Thanks
 
 Inspiration and code was taken from many sources, including:

@@ -9,11 +9,11 @@ install_or_upgrade grc
 install_or_upgrade openssl
 install_or_upgrade git
 install_or_upgrade git-extras
-install_or_upgrade httpie
 install_or_upgrade fish
+install_or_upgrade pyenv
 
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package quicklookase
-brew cask install visual-studio-code open-in-code
+brew install --cask qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package quicklookase
+brew install --cask visual-studio-code open-in-code
 
 brew tap homebrew/cask-fonts
-brew cask install font-fira-code
+brew install --cask font-cascadia-code
