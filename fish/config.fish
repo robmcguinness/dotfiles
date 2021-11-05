@@ -1,3 +1,5 @@
+fish_add_path /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin
+
 . ~/.config/fish/aliases.fish
 set -gx fish_greeting ''
 
