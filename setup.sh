@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # executes on exit
 trap 'ret=$?; test $ret -ne 0 && printf "\n\e[31m\033[0m  Setup Failed  \e[31m\033[0m\n\n" >&2; exit $ret' EXIT
@@ -46,9 +46,9 @@ if brew list | grep -Fq brew-cask; then
 fi
 
 # BREW KEGS
-if [ -e $cwd/brew/brew.sh ]; then
-  step "Installing Homebrew Formulaes"
-  . "brew/brew.sh"
+if [ -e brew.sh ]; then
+  step "Installing Homebrew Formulas"
+  . "brew.sh"
   brew cleanup
 fi
 
@@ -76,8 +76,8 @@ setup_fish
 
 # FISHER
 step "Installing Fisher Plugin Manager for Fish Shell"
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-fish -c fisher
+fish -c 'curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher'
+fish -c fisher update
 print_success "Fisher installed!"
 
 step "Setup Visual Studio Code Symlink and Plugins"

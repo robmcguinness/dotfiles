@@ -6,7 +6,7 @@ alias ..4='cd ../../../..'
 
 alias c="clear"
 
-alias l='ls -lah'
+alias l='exa -la'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # alias dog='pygmentize -O style=monokai -f console256 -g'
