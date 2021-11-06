@@ -1,0 +1,165 @@
+{
+  "[handlebars]": {
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false
+  },
+  "[markdown]": {
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.parameterHints.enabled": false,
+    "editor.quickSuggestions": false,
+    "editor.renderWhitespace": "all",
+    "editor.snippetSuggestions": "none",
+    "files.trimTrailingWhitespace": false
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },    
+  "css.validate": false,
+  "debug.allowBreakpointsEverywhere": true,
+  "debug.toolBarLocation": "docked",
+  "diffEditor.codeLens": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": false,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "Cascadia Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnType": true,
+  "editor.guides.bracketPairs": true,
+  "editor.insertSpaces": true,
+  "editor.largeFileOptimizations": false,
+  "editor.matchBrackets": "always",
+  "editor.maxTokenizationLineLength": 10000,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderControlCharacters": false,
+  "editor.renderWhitespace": "all",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.snippetSuggestions": "bottom",
+  "editor.suggest.preview": true,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": false,
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "explorer.autoReveal": true,
+  "files.associations": {
+    "*.mdx": "mdx"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "dist/": false,
+    "lib/": false,
+    "node_modules/": false
+  },
+  "files.trimTrailingWhitespace": true,
+  "gitProjectManager.baseProjectsFolders": [
+    "/Users/Rob.McGuinness/Workspaces"
+  ],
+  "gitProjectManager.checkRemoteOrigin": false,
+  "gitProjectManager.storeRepositoriesBetweenSessions": true,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": true,
+    "suppressNoRepositoryWarning": false
+  },
+  "gitlens.codeLens.scopes": [
+    "containers"
+  ],
+  "gitlens.keymap": "none",
+  "gitlens.statusBar.enabled": false,
+  "html.format.enable": true,
+  "html.format.indentHandlebars": true,
+  "html.format.maxPreserveNewLines": 0,
+  "javascript.suggestionActions.enabled": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "jest.autoRun": {
+    "onSave": "test-file",
+    "watch": false
+  },
+  "jest.debugCodeLens.showWhenTestStateIn": [
+    "fail",
+    "pass",
+    "skip",
+    "unknown"
+  ],
+  "jest.debugMode": true,
+  "jest.enableCodeLens": true,
+  "jest.showCoverageOnLoad": false,
+  "prettier.requireConfig": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "python.formatting.provider": "autopep8",
+  "redhat.telemetry.enabled": false,
+  "rest-client.enableTelemetry": false,
+  "rest-client.excludeHostsForProxy": [
+    "localhost",
+    "127.0.0.1"
+  ],
+  "rest-client.followredirect": false,
+  "scss.validate": false,
+  "search.maintainFileSearchCache": true,
+  "search.mode": "reuseEditor",
+  "search.searchEditor.defaultNumberOfContextLines": 2,
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "clsx\\(([^)]*)\\)",
+      "'([^']*)'"
+    ],
+    [
+      "baseStyle.=.[\"'`]([^\"'`]*)"
+    ]
+  ],
+  "tailwindCSS.includeLanguages": {
+    "javascriptreact": "html",
+    "plaintext": "html",
+    "typescriptreact": "html"
+  },
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.fontFamily": "Cascadia Mono PL",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.profiles.osx": {
+    "fish": {
+      "path": "/Users/Rob.McGuinness/.homebrew/bin/fish"
+    }
+  },
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.titleMode": "sequence",
+  "typescript.suggest.paths": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vsicons.dontShowNewVersionMessage": true,
+  // "javascript.inlayHints.parameterNames.enabled": "all",
+  // "javascript.inlayHints.variableTypes.enabled": true,
+  // "typescript.inlayHints.parameterNames.enabled": "all",
+  // "typescript.inlayHints.variableTypes.enabled": true,
+  "window.autoDetectHighContrast": false,
+  "workbench.colorCustomizations": {
+    "[One Dark Pro]": {
+      "tab.activeBorderTop": "#0A84FF"
+    }
+  },
+  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.fontAliasing": "default",
+  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.sideBar.location": "right",
+  "yaml.schemas": {
+    "file:///Users/Rob.McGuinness/.vscode/extensions/atlassian.atlascode-2.9.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  }
+}
