@@ -14,9 +14,6 @@
     "editor.snippetSuggestions": "none",
     "files.trimTrailingWhitespace": false
   },
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
-  },    
   "css.validate": false,
   "debug.allowBreakpointsEverywhere": true,
   "debug.toolBarLocation": "docked",
@@ -76,9 +73,7 @@
     "suppressLineUncommittedWarning": true,
     "suppressNoRepositoryWarning": false
   },
-  "gitlens.codeLens.scopes": [
-    "containers"
-  ],
+  "gitlens.codeLens.scopes": ["containers"],
   "gitlens.keymap": "none",
   "gitlens.statusBar.enabled": false,
   "html.format.enable": true,
@@ -90,38 +85,19 @@
     "onSave": "test-file",
     "watch": false
   },
-  "jest.debugCodeLens.showWhenTestStateIn": [
-    "fail",
-    "pass",
-    "skip",
-    "unknown"
-  ],
+  "jest.debugCodeLens.showWhenTestStateIn": ["fail", "pass", "skip", "unknown"],
   "jest.debugMode": true,
   "jest.enableCodeLens": true,
   "jest.showCoverageOnLoad": false,
   "prettier.requireConfig": true,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
-  "python.formatting.provider": "autopep8",
-  "redhat.telemetry.enabled": false,
-  "rest-client.enableTelemetry": false,
-  "rest-client.excludeHostsForProxy": [
-    "localhost",
-    "127.0.0.1"
-  ],
-  "rest-client.followredirect": false,
-  "scss.validate": false,
   "search.maintainFileSearchCache": true,
   "search.mode": "reuseEditor",
   "search.searchEditor.defaultNumberOfContextLines": 2,
   "tailwindCSS.experimental.classRegex": [
-    [
-      "clsx\\(([^)]*)\\)",
-      "'([^']*)'"
-    ],
-    [
-      "baseStyle.=.[\"'`]([^\"'`]*)"
-    ]
+    ["clsx\\(([^)]*)\\)", "'([^']*)'"],
+    ["baseStyle.=.[\"'`]([^\"'`]*)"]
   ],
   "tailwindCSS.includeLanguages": {
     "javascriptreact": "html",
@@ -139,7 +115,6 @@
     }
   },
   "terminal.integrated.tabs.enabled": false,
-  "terminal.integrated.titleMode": "sequence",
   "typescript.suggest.paths": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vsicons.dontShowNewVersionMessage": true,
@@ -158,5 +133,5 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.fontAliasing": "default",
   "workbench.iconTheme": "vscode-great-icons",
-  "workbench.sideBar.location": "right"  
+  "workbench.sideBar.location": "right"
 }
