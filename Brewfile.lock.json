@@ -1636,6 +1636,12 @@
         "options": {
           "full_name": "discord"
         }
+      },
+      "font-cascadia-code-pl": {
+        "version": "2110.31",
+        "options": {
+          "full_name": "font-cascadia-code-pl"
+        }
       }
     }
   },
