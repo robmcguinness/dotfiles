@@ -18,5 +18,6 @@ alias pubkey='pbcopy < ~/.ssh/id_rsa.pub'
 
 # iterate through all git repos and show the url
 alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config --get remote.origin.url" \;'
+
 # iterate through all git repos and run `git pull`
 alias gua='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'

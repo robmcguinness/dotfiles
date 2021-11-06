@@ -2,16 +2,16 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "6ea4618e07c7899294ac36b880bf0659fa5d0db7"
+        "revision": "e11704f58688da7e9d0192d08ff2b31c252a2f6b"
       },
       "homebrew/cask": {
-        "revision": "f2a640f12cd5f37ee003cfd83d5d05556359dabc"
+        "revision": "014a9637a1739fc7f1d572589b91a5b08effe98b"
       },
       "homebrew/cask-fonts": {
         "revision": "af813d6bb0bf96e39759bc44216073390306d3cb"
       },
       "homebrew/core": {
-        "revision": "d12cb4793643fc10714d806349381d2471e8ee18"
+        "revision": "41626427fcf9bd23ad7a1ff9da7bdffb092589e9"
       },
       "homebrew/services": {
         "revision": "23d6171015936cd442a928ccd52a0e64c6fbfb63"
@@ -1505,6 +1505,45 @@
             }
           }
         }
+      },
+      "zoxide": {
+        "version": "0.7.9",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/zoxide/blobs/sha256:b120b1e84f236e8b7214d4362ce5ea35de0236448af122e565aff03556da9447",
+              "sha256": "b120b1e84f236e8b7214d4362ce5ea35de0236448af122e565aff03556da9447"
+            },
+            "arm64_big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/zoxide/blobs/sha256:7154297736107b957a8e4e2bf56336833d0997389da5ea6b59bfd90add51e91a",
+              "sha256": "7154297736107b957a8e4e2bf56336833d0997389da5ea6b59bfd90add51e91a"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/zoxide/blobs/sha256:b4498343517aeac760fdfb01839425fb8cf66ae595d1a65b615e569dedaeee14",
+              "sha256": "b4498343517aeac760fdfb01839425fb8cf66ae595d1a65b615e569dedaeee14"
+            },
+            "big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/zoxide/blobs/sha256:664fbe640ad0301f452f17aa16533c9ffeb8154209c5741b56c4b21c9a5f3828",
+              "sha256": "664fbe640ad0301f452f17aa16533c9ffeb8154209c5741b56c4b21c9a5f3828"
+            },
+            "catalina": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/zoxide/blobs/sha256:6d161a406e087ae16efc384c21d709ffe202e3fe0cf92e31367a36d0d6f38243",
+              "sha256": "6d161a406e087ae16efc384c21d709ffe202e3fe0cf92e31367a36d0d6f38243"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/zoxide/blobs/sha256:17d9c54a294be74c878d589acf52729dd4e1644f2adb97691040185cef2c9ff6",
+              "sha256": "17d9c54a294be74c878d589acf52729dd4e1644f2adb97691040185cef2c9ff6"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -1591,6 +1630,12 @@
         "options": {
           "full_name": "visual-studio-code"
         }
+      },
+      "discord": {
+        "version": "0.0.264",
+        "options": {
+          "full_name": "discord"
+        }
       }
     }
   },
@@ -1599,10 +1644,10 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.3.2",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "d12cb4793643fc10714d806349381d2471e8ee18",
+        "Homebrew/homebrew-core": "41626427fcf9bd23ad7a1ff9da7bdffb092589e9",
         "CLT": "13.1.0.0.1.1633545042",
         "Xcode": "13.0",
-        "macOS": "12.0"
+        "macOS": "12.0.1"
       }
     }
   }

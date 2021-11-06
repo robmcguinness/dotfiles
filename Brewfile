@@ -35,13 +35,13 @@ brew "pass"
 
 brew "pyenv"
 
+brew "zoxide"
+
 # Better than Apple versions
 brew "grep"
 brew "openssh"
 brew "openssl"
 
-# z hopping around folders
-brew "z"
 
 # Simple, fast and user-friendly alternative to find
 brew "fd"
