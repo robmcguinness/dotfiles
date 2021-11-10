@@ -63,6 +63,18 @@ brew "fish"
 # colorize the world
 brew "grc"
 
+# A better sed
+brew "sd"
+
+# A better du
+brew "dust"
+
+# hyperfine is a command-line benchmarking tool
+brew "hyperfine"
+
+# tokei is a program that displays statistics about your code
+brew "tokei"
+
 # A better cat
 brew "bat"
 
@@ -79,7 +91,13 @@ brew "netcat"
 brew "exa"
 
 # A beter man pages
-brew "tldr"
+brew "tealdeer"
+
+# bandwhich is a CLI utility for displaying current network utilization by process, connection and remote IP or hostname.
+brew "bandwhich"
+
+# grex is a command-line tool and library for generating regular expressions from user-provided test cases.
+brew "grex"
 
 # View markdown in the terminal
 brew "glow"
