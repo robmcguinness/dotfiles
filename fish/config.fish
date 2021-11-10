@@ -2,7 +2,7 @@ set fish_greeting
 
 set -x EDITOR "nvim"
 
-fish_add_path /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin
+fish_add_path /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin $HOME/.cargo/env
 
 . ~/.config/fish/aliases.fish
 

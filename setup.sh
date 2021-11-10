@@ -83,3 +83,6 @@ print_success "Fisher installed!"
 step "Setup Visual Studio Code Symlink and Plugins"
 sh ./setup-vscode.sh
 print_success "Visual Studio Code Setup!"
+
+step "Setup Rust"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

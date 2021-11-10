@@ -3,6 +3,7 @@ setup_vscode() {
   local PLUGINS_TO_INSTALL="alefragnani.Bookmarks
 alexdima.copy-relative-path
 andrewmarkle.primer-light
+bradlc.vscode-tailwindcss
 bungcip.better-toml
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
@@ -12,12 +13,14 @@ dbaeumer.vscode-eslint
 drKnoxy.eslint-disable-snippets
 eamodio.gitlens
 EditorConfig.EditorConfig
+emmanuelbeziat.vscode-great-icons
 esbenp.prettier-vscode
 fabiospampinato.vscode-open-in-gittower
 felipecaputo.git-project-manager
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 hdevalke.rust-test-lens
+heybourn.headwind
 jeff-hykin.better-shellscript-syntax
 matklad.rust-analyzer
 nemesv.copy-file-name
