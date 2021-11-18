@@ -45,3 +45,5 @@ zhuangtongfa.material-theme"
 setup_vscode
 
 ln -sf $HOME/Workspaces/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/
+ln -sf $HOME/Workspaces/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/
+

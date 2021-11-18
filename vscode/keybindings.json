@@ -1,0 +1,46 @@
+[
+  {
+    "key": "shift+cmd+x",
+    "command": "editor.action.deleteLines",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+cmd+x",
+    "command": "workbench.view.extensions"
+  },
+  {
+    "key": "shift+cmd+x",
+    "command": "-workbench.view.extensions"
+  },
+  {
+    "key": "ctrl+shift+cmd+up",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+cmd+right",
+    "command": "-editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+cmd+down",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+cmd+left",
+    "command": "-editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+\\",
+    "command": "editor.action.selectToBracket",
+    "args": {
+      "selectBrackets": false
+    }
+  },
+  {
+    "key": "cmd+h",
+    "command": "editor.emmet.action.matchTag"
+  }
+]
