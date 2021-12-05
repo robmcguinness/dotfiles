@@ -102,6 +102,8 @@ brew "grex"
 # View markdown in the terminal
 brew "glow"
 
+brew "podman"
+
 # quicklook hotness
 cask "qlcolorcode"
 cask "qlstephen"
