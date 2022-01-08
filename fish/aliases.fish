@@ -21,3 +21,5 @@ alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config 
 
 # iterate through all git repos and run `git pull`
 alias gua='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
+
+alias cm="clean-mark"

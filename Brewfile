@@ -104,15 +104,18 @@ brew "glow"
 
 brew "podman"
 
+brew "macos-trash"
+
+brew "lastpass-cli"
+
+
 # quicklook hotness
 cask "qlcolorcode"
 cask "qlstephen"
 cask "qlmarkdown"
 cask "quicklook-json"
-
 # Screen recording software
 cask "kap"
-
 cask "alfred"
 cask "font-cascadia-code"
 cask "font-cascadia-code-pl"
@@ -128,3 +131,5 @@ cask "visual-studio-code"
 cask "discord"
 cask "itsycal"
 cask "spotify"
+cask "monitorcontrol"
+cask "appcleaner"

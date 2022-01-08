@@ -127,10 +127,11 @@
       "tab.activeBorderTop": "#0A84FF"
     }
   },
-  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.colorTheme": "GitHub Dark",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.fontAliasing": "default",
-  "workbench.iconTheme": "vscode-great-icons",
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "vsicons.dontShowNewVersionMessage": true,
+  "window.zoomLevel": 1
 }
