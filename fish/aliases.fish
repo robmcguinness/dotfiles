@@ -23,3 +23,5 @@ alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config 
 alias gua='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
 
 alias cm="clean-mark"
+
+alias tower="gittower"
