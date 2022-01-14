@@ -11,6 +11,9 @@ brew "starship"
 # A better ps
 brew "procs"
 
+# A better nvm
+brew "fnm"
+
 # GNU core utilities (those that come with macOS are outdated)
 brew "coreutils"
 brew "moreutils"
@@ -133,3 +136,4 @@ cask "itsycal"
 cask "spotify"
 cask "monitorcontrol"
 cask "appcleaner"
+cask "slack"
