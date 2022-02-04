@@ -1,1 +1,22 @@
+# OS X cruft
 .DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editors
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+.python-version
+.pytest_cache
+.venv/
+.tox/
+.mypy_cache/
+*.pyc
+*.egg-info/
+
+# asdf
+.tool-versions

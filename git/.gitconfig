@@ -1,6 +1,10 @@
 [user]
-  name = Robert McGuinness
-  email = robert.mcguinness.iii@gmail.com
+  name = Rob McGuinness
+  # email = robert.mcguinness.iii@gmail.com
+
+[includeIf "gitdir:~/Work/"]
+  path = ~/Work/.gitconfig-work
+
 [core]
   editor = code --wait
 [diff]

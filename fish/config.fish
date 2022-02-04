@@ -1,8 +1,8 @@
 set fish_greeting
 
-set -x EDITOR "nvim"
+set -x EDITOR "code"
 
-fish_add_path /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin $HOME/.cargo/env
+fish_add_path $HOME/Dev/homebrew/bin /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/ $HOME/Dev/homebrew/sbin /usr/local/bin $HOME/.cargo/env
 
 . ~/.config/fish/aliases.fish
 

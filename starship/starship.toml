@@ -1,0 +1,17 @@
+scan_timeout = 20
+add_newline = true
+
+[nix_shell]
+disabled = true
+
+[dart]
+disabled = true
+
+[dotnet]
+disabled = true
+
+[elm]
+disabled = true
+
+[erlang]
+disabled = true

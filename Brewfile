@@ -33,9 +33,6 @@ brew "wget"
 # homebrew version of curl did not work downloading certain files. Investigating...
 brew "curl"
 
-# A password manager
-brew "pass"
-
 brew "pyenv"
 
 brew "zoxide"
@@ -62,6 +59,7 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 brew "fish"
+brew "fisher"
 
 # colorize the world
 brew "grc"
@@ -109,8 +107,6 @@ brew "podman"
 
 brew "macos-trash"
 
-brew "lastpass-cli"
-
 
 # quicklook hotness
 cask "qlcolorcode"
@@ -137,3 +133,4 @@ cask "spotify"
 cask "monitorcontrol"
 cask "appcleaner"
 cask "slack"
+cask "tower"

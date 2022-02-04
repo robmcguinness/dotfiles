@@ -1,0 +1,52 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+        force: true
+    shell:
+        stdout: true
+        stderr: true
+
+- clean:
+  - '~'
+  - '~/.config'
+  - '~/.config/fish/completions'
+  - '~/.config/fish/conf.d'
+  - '~/.config/fish/functions'
+  - '~/.config/starship'
+  - '~/.config/starship'
+
+# Create directory for coding projects
+- create:
+    - ~/Code
+    - ~/Workspaces
+    - ~/Dev
+    - ~/Dev/homebrew
+
+- link:
+    ~/Brewfile:
+        path: Brewfile
+    ~/.editorconfig: editorconfig/.editorconfig
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/fish_plugins: fish/fish_plugins
+    ~/.config/fish/functions:
+        path: fish/functions/*.fish
+        glob: true
+    ~/.zshenv: zsh/.zshenv
+    ~/.zshrc: zsh/.zshrc
+    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
+    ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
+    ~/.config/starship/starship.toml:
+      path: starship/starship.toml
+      create: true
+    ~/.gitattributes: git/.gitattributes
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore: git/.gitignore
+
+
+- shell:
+  - [curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $HOME/Dev/homebrew, Installing Homebrew]
+  - [eval "$($HOME/Dev/homebrew/bin/brew shellenv)", Set Homebrew path]
+  - [brew bundle, Running brew bundle]
+  - [$HOME/Dev/homebrew/bin/fish -c "fisher update"]
+# - [chsh -s $(which fish), Making fish the default shell]

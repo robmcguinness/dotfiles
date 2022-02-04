@@ -132,6 +132,5 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.fontAliasing": "default",
   "workbench.sideBar.location": "right",
-  "vsicons.dontShowNewVersionMessage": true,
-  "window.zoomLevel": 1
+  "vsicons.dontShowNewVersionMessage": true
 }

@@ -1,21 +1,25 @@
 # 💻
 
-> macOS setup scripts for development
+> macOS setup script
 
 ![optimus prime](optimus.gif)
 
+## Features
+
+- [Fish](https://fishshell.com/) - Alternative command line shell
+- [Zsh](https://support.apple.com/en-us/HT208050) - Default command line shell for macOS
+- [Fisher](https://github.com/jorgebucaran/fisher) - Fish plugin manager
+- [Starship](https://github.com/starship/starship) -  Customizable prompt for any shell
+- [Visual Studio Code](https://code.visualstudio.com/) - Code editor and yes better than Vim 😉 
+- [Dotbot](https://github.com/anishathalye/dotbot) - Bootstrap for dotfiles
+
 ## Setup
 
-- Clone this repo
-- Run `sh ./setup.sh`
+```sh
+git clone --recurse-submodules https://github.com/robmcguinness/dotfiles ~/.dotfiles
+~/.dotfiles/install.sh
+```
 
-## Manual Setup
+## Inspiration
 
-- Install latest [SourceCodeSyntaxHighlight](https://github.com/sbarex/SourceCodeSyntaxHighlight)
-
-## Thanks
-
-Inspiration and code was taken from many sources, including:
-
-- [minamarkham/formation](https://github.com/minamarkham/formation)
-- [paulirish/dotfiles](https://github.com/paulirish/dotfiles)
+<https://github.com/pgilad/dotfiles>
