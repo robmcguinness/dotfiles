@@ -47,6 +47,6 @@
 - shell:
   - [curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $HOME/Dev/homebrew, Installing Homebrew]
   - [eval "$($HOME/Dev/homebrew/bin/brew shellenv)", Set Homebrew path]
-  - [brew bundle, Running brew bundle]
+  - [$HOME/Dev/homebrew/bin/brew bundle, Running brew bundle]
   - [$HOME/Dev/homebrew/bin/fish -c "fisher update"]
 # - [chsh -s $(which fish), Making fish the default shell]

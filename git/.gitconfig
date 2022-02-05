@@ -1,6 +1,6 @@
 [user]
   name = Rob McGuinness
-  # email = robert.mcguinness.iii@gmail.com
+  email = robert.mcguinness.iii@gmail.com
 
 [includeIf "gitdir:~/Work/"]
   path = ~/Work/.gitconfig-work
