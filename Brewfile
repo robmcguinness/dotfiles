@@ -58,6 +58,7 @@ brew "tree"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
+
 brew "fish"
 brew "fisher"
 
@@ -109,22 +110,20 @@ brew "macos-trash"
 
 
 # quicklook hotness
-cask "qlcolorcode"
+cask "syntax-highlight", args: { no_quarantine: true }
 cask "qlstephen"
 cask "qlmarkdown"
 cask "quicklook-json"
+
 # Screen recording software
 cask "kap"
+
 cask "alfred"
-cask "font-cascadia-code"
-cask "font-cascadia-code-pl"
 cask "lastpass"
 cask "suspicious-package"
 cask "brave-browser"
 cask "iterm2"
 cask "open-in-code"
-cask "qlmarkdown"
-cask "quicklook-json"
 cask "rectangle"
 cask "visual-studio-code"
 cask "discord"
@@ -134,3 +133,6 @@ cask "monitorcontrol"
 cask "appcleaner"
 cask "slack"
 cask "tower"
+
+cask "font-cascadia-code"
+cask "font-cascadia-code-pl"

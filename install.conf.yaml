@@ -49,4 +49,5 @@
   - [eval "$($HOME/Dev/homebrew/bin/brew shellenv)", Set Homebrew path]
   - [$HOME/Dev/homebrew/bin/brew bundle, Running brew bundle]
   - [$HOME/Dev/homebrew/bin/fish -c "fisher update"]
+  - [./scripts/macos.sh]
 # - [chsh -s $(which fish), Making fish the default shell]

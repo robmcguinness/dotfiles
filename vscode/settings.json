@@ -92,7 +92,6 @@
   "prettier.requireConfig": true,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
-  "search.maintainFileSearchCache": true,
   "search.mode": "reuseEditor",
   "search.searchEditor.defaultNumberOfContextLines": 2,
   "tailwindCSS.experimental.classRegex": [
@@ -111,7 +110,7 @@
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.profiles.osx": {
     "fish": {
-      "path": "/opt/homebrew/bin/fish"
+      "path": "/Users/robertmcguinness/Dev/homebrew/bin/fish"
     }
   },
   "terminal.integrated.tabs.enabled": false,
