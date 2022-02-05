@@ -42,6 +42,7 @@
     ~/.gitattributes: git/.gitattributes
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore: git/.gitignore
+    ~/.config/bat/config: bat/config
 
 
 - shell:
