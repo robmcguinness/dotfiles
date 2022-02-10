@@ -105,12 +105,12 @@
   },
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.osx": "fish",
-  // "terminal.integrated.fontFamily": "Cascadia Code PL",
+  "terminal.integrated.fontFamily": "Cascadia Code PL",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.profiles.osx": {
     "fish": {
-      "path": "/Users/robertmcguinness/Dev/homebrew/bin/fish"
+      "path": "${env:HOME}/Dev/homebrew/bin/fish"
     }
   },
   "terminal.integrated.tabs.enabled": false,
