@@ -39,7 +39,6 @@ brew "zoxide"
 
 # Better than Apple versions
 brew "grep"
-brew "openssh"
 brew "openssl"
 
 
@@ -113,7 +112,6 @@ brew "macos-trash"
 cask "syntax-highlight", args: { no_quarantine: true }
 cask "qlstephen"
 cask "qlmarkdown"
-cask "quicklook-json"
 
 # Screen recording software
 cask "kap"
