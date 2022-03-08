@@ -1,4 +1,4 @@
-scan_timeout = 20
+scan_timeout = 200
 add_newline = true
 
 [nix_shell]
