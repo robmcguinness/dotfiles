@@ -131,7 +131,7 @@ cask "monitorcontrol"
 cask "appcleaner"
 cask "slack"
 cask "tower"
-cask "font-smoothing-adjuster"
+cask "betterdummy"
 
 cask "font-cascadia-code"
 cask "font-cascadia-code-pl"
