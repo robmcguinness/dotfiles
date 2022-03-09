@@ -79,3 +79,5 @@
   # Remove branches that have already been merged with master
   # a.k.a. ‘delete merged’
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
