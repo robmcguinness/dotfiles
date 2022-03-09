@@ -111,7 +111,7 @@ brew "macos-trash"
 # quicklook hotness
 cask "syntax-highlight", args: { no_quarantine: true }
 cask "qlstephen"
-cask "qlmarkdown"
+cask "qlmarkdown", args: { no_quarantine: true }
 
 # Screen recording software
 cask "kap"
@@ -131,7 +131,7 @@ cask "monitorcontrol"
 cask "appcleaner"
 cask "slack"
 cask "tower"
-cask "font-smoothing-adjuster"
+cask ""
 
 cask "font-cascadia-code"
 cask "font-cascadia-code-pl"
