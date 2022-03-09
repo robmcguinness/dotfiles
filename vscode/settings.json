@@ -60,9 +60,8 @@
     "node_modules/": false
   },
   "files.trimTrailingWhitespace": true,
-  "gitProjectManager.baseProjectsFolders": [
-    "/Users/robertmcguinness/Workspaces"
-  ],
+  "gitProjectManager.baseProjectsFolders": ["~/Workspaces"],
+  "gitProjectManager.ignoredFolders": ["node_modules"],
   "gitProjectManager.checkRemoteOrigin": false,
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
   "gitlens.advanced.messages": {
@@ -126,7 +125,7 @@
       "tab.activeBorderTop": "#0A84FF"
     }
   },
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.fontAliasing": "default",
