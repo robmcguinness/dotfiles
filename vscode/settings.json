@@ -3,6 +3,10 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false
   },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   "[markdown]": {
     "editor.acceptSuggestionOnEnter": "off",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -13,6 +17,10 @@
     "editor.renderWhitespace": "all",
     "editor.snippetSuggestions": "none",
     "files.trimTrailingWhitespace": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "css.validate": false,
   "debug.allowBreakpointsEverywhere": true,
@@ -75,6 +83,7 @@
   },
   "gitlens.codeLens.scopes": ["containers"],
   "gitlens.keymap": "none",
+  "gitlens.liveshare.allowGuestAccess": false,
   "gitlens.statusBar.enabled": false,
   "html.format.enable": true,
   "html.format.indentHandlebars": true,
@@ -116,6 +125,7 @@
   "terminal.integrated.tabs.enabled": false,
   "typescript.suggest.paths": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "vsicons.dontShowNewVersionMessage": true,
   // "javascript.inlayHints.parameterNames.enabled": "all",
   // "javascript.inlayHints.variableTypes.enabled": true,
   // "typescript.inlayHints.parameterNames.enabled": "all",
@@ -130,6 +140,5 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.fontAliasing": "default",
-  "workbench.sideBar.location": "right",
-  "vsicons.dontShowNewVersionMessage": true
+  "workbench.sideBar.location": "right"
 }
