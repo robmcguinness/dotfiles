@@ -131,7 +131,6 @@ cask "monitorcontrol"
 cask "appcleaner"
 cask "slack"
 cask "tower"
-cask ""
 
 cask "font-cascadia-code"
 cask "font-cascadia-code-pl"
