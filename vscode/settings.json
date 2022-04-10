@@ -36,7 +36,7 @@
   "editor.fontSize": 16,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "file",
+  "editor.formatOnSaveMode": "modifications",
   "editor.formatOnType": true,
   "editor.guides.bracketPairs": true,
   "editor.insertSpaces": true,
