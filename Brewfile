@@ -103,7 +103,10 @@ brew "grex"
 # View markdown in the terminal
 brew "glow"
 
-brew "podman"
+# Docker
+brew "colima"
+brew "docker"
+brew "docker-compose"
 
 brew "macos-trash"
 

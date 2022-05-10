@@ -50,5 +50,7 @@
   - [eval "$($HOME/Dev/homebrew/bin/brew shellenv)", Set Homebrew path]
   - [$HOME/Dev/homebrew/bin/brew bundle, Running brew bundle]
   - [$HOME/Dev/homebrew/bin/fish -c "fisher update"]
+  - [mkdir -p ~/.docker/cli-plugins, configure docker-compose as a Docker plugin]
+  - [ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose, Symlink the docker-compose command into that new folder]
   - [./scripts/macos.sh]
 # - [chsh -s $(which fish), Making fish the default shell]
