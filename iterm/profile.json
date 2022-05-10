@@ -26,7 +26,13 @@
     "Green Component" : 0.57647061347961426
   },
   "Normal Font" : "CascadiaCodePL-Regular 16",
-  "Custom Directory" : "No",
+  "Ansi 3 Color" : {
+    "Red Component" : 1,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.41960784792900085,
+    "Alpha Component" : 1,
+    "Green Component" : 0.79607844352722168
+  },
   "Ansi 4 Color" : {
     "Red Component" : 0.50980395078659058,
     "Color Space" : "sRGB",
@@ -80,7 +86,7 @@
   "Sync Title" : false,
   "Prompt Before Closing 2" : false,
   "BM Growl" : true,
-  "Command" : "\/opt\/homebrew\/bin\/fish",
+  "Command" : "",
   "Description" : "Default",
   "Mouse Reporting" : true,
   "Screen" : -1,
@@ -100,7 +106,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.57254904508590698
   },
-  "Custom Command" : "Custom Shell",
+  "Custom Command" : "No",
   "ASCII Anti Aliased" : true,
   "Non Ascii Font" : "Monaco 12",
   "Vertical Spacing" : 1,
@@ -118,7 +124,7 @@
     "Color Space" : "sRGB",
     "Blue Component" : 0.10196078568696976,
     "Alpha Component" : 1,
-    "Green Component" : 0.066666670143604279
+    "Green Component" : 0.066666670143604251
   },
   "Character Encoding" : 4,
   "Ansi 11 Color" : {
@@ -304,7 +310,13 @@
     "Alpha Component" : 0.5,
     "Green Component" : 0.1491314172744751
   },
+  "Initial Text" : "",
   "Scrollback Lines" : 1000,
+  "Semantic History" : {
+    "text" : "",
+    "action" : "editor",
+    "editor" : "com.microsoft.VSCode"
+  },
   "Send Code When Idle" : false,
   "Close Sessions On End" : true,
   "Terminal Type" : "xterm-256color",
@@ -325,7 +337,7 @@
     "Color Space" : "sRGB",
     "Blue Component" : 0.10196078568696976,
     "Alpha Component" : 1,
-    "Green Component" : 0.066666670143604279
+    "Green Component" : 0.066666670143604251
   },
   "Shortcut" : "",
   "Cursor Color" : {
@@ -363,13 +375,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.50196081399917603
   },
-  "Ansi 3 Color" : {
-    "Red Component" : 1,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.41960784792900085,
-    "Alpha Component" : 1,
-    "Green Component" : 0.79607844352722168
-  },
+  "Custom Directory" : "No",
   "Ansi 5 Color" : {
     "Red Component" : 0.78039216995239258,
     "Color Space" : "sRGB",
