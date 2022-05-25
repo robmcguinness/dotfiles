@@ -55,6 +55,14 @@
   "editor.trimAutoWhitespace": false,
   "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
   "explorer.autoReveal": true,
+  "explorer.experimental.fileNesting.patterns": {
+    "*.js": "$(capture).js.map, $(capture).min.js, $(capture).d.ts",
+    "*.jsx": "$(capture).js",
+    "*.ts": "$(capture).js, $(capture).*.ts",
+    "*.tsx": "$(capture).ts",
+    "package.json": "package-lock.json, .npmrc, yarn.lock, .yarnrc, pnpm-lock.yaml, .yarnrc.yml, .prettierrc.js, turbo.json",
+    "tsconfig.json": "tsconfig.*.json"
+  },
   "files.associations": {
     "*.mdx": "mdx"
   },
@@ -68,9 +76,13 @@
     "node_modules/": false
   },
   "files.trimTrailingWhitespace": true,
-  "gitProjectManager.baseProjectsFolders": ["~/Workspaces"],
-  "gitProjectManager.ignoredFolders": ["node_modules"],
+  "gitProjectManager.baseProjectsFolders": [
+    "~/Workspaces"
+  ],
   "gitProjectManager.checkRemoteOrigin": false,
+  "gitProjectManager.ignoredFolders": [
+    "node_modules"
+  ],
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
@@ -80,7 +92,9 @@
     "suppressLineUncommittedWarning": true,
     "suppressNoRepositoryWarning": false
   },
-  "gitlens.codeLens.scopes": ["containers"],
+  "gitlens.codeLens.scopes": [
+    "containers"
+  ],
   "gitlens.keymap": "none",
   "gitlens.liveshare.allowGuestAccess": false,
   "gitlens.statusBar.enabled": false,
@@ -93,7 +107,13 @@
     "onSave": "test-file",
     "watch": false
   },
-  "jest.debugCodeLens.showWhenTestStateIn": ["fail", "pass", "skip", "unknown"],
+  "eslint.debug": true,
+  "jest.debugCodeLens.showWhenTestStateIn": [
+    "fail",
+    "pass",
+    "skip",
+    "unknown"
+  ],
   "jest.debugMode": true,
   "jest.enableCodeLens": true,
   "jest.showCoverageOnLoad": false,
@@ -102,9 +122,15 @@
   "prettier.trailingComma": "es5",
   "search.mode": "reuseEditor",
   "search.searchEditor.defaultNumberOfContextLines": 2,
+  "semgrep.rules": "https://semgrep.dev/p/r2c-security-audit",
   "tailwindCSS.experimental.classRegex": [
-    ["clsx\\(([^)]*)\\)", "'([^']*)'"],
-    ["baseStyle.=.[\"'`]([^\"'`]*)"]
+    [
+      "clsx\\(([^)]*)\\)",
+      "'([^']*)'"
+    ],
+    [
+      "baseStyle.=.[\"'`]([^\"'`]*)"
+    ]
   ],
   "tailwindCSS.includeLanguages": {
     "javascriptreact": "html",
@@ -131,6 +157,7 @@
   // "typescript.inlayHints.parameterNames.enabled": "all",
   // "typescript.inlayHints.variableTypes.enabled": true,
   "window.autoDetectHighContrast": false,
+  "window.zoomLevel": 1,
   "workbench.colorCustomizations": {
     "[One Dark Pro]": {
       "tab.activeBorderTop": "#0A84FF"
@@ -140,14 +167,5 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.fontAliasing": "default",
-  "workbench.sideBar.location": "right",
-  "explorer.experimental.fileNesting.patterns": {
-    "*.ts": "$(capture).js, $(capture).*.ts",
-    "*.js": "$(capture).js.map, $(capture).min.js, $(capture).d.ts",
-    "*.jsx": "$(capture).js",
-    "*.tsx": "$(capture).ts",
-    "tsconfig.json": "tsconfig.*.json",
-    "package.json": "package-lock.json, .npmrc, yarn.lock, .yarnrc, pnpm-lock.yaml, .yarnrc.yml, .prettierrc.js, turbo.json"
-  },
-  "window.zoomLevel": 1
+  "workbench.sideBar.location": "right"
 }

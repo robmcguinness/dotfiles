@@ -110,6 +110,8 @@ brew "docker-compose"
 
 brew "macos-trash"
 
+brew "alt-tab"
+
 
 # quicklook hotness
 cask "syntax-highlight", args: { no_quarantine: true }
