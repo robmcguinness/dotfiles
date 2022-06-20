@@ -114,6 +114,7 @@ brew "macos-trash"
 brew "alt-tab"
 
 brew "pulumi"
+brew "awscli"
 
 
 # quicklook hotness
