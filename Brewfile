@@ -4,6 +4,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "rs/tap"
+tap "pulumi/tap"
 
 # prompt
 brew "starship"
@@ -112,6 +113,8 @@ brew "macos-trash"
 
 brew "alt-tab"
 
+brew "pulumi"
+
 
 # quicklook hotness
 cask "syntax-highlight", args: { no_quarantine: true }
@@ -139,3 +142,4 @@ cask "tower"
 
 cask "font-cascadia-code"
 cask "font-cascadia-code-pl"
+
