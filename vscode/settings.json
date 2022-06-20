@@ -13,7 +13,11 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.parameterHints.enabled": false,
-    "editor.quickSuggestions": false,
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
     "editor.renderWhitespace": "all",
     "editor.snippetSuggestions": "none",
     "files.trimTrailingWhitespace": false
