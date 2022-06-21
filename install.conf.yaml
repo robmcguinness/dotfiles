@@ -53,4 +53,5 @@
   - [mkdir -p ~/.docker/cli-plugins, configure docker-compose as a Docker plugin]
   - [ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose, Symlink the docker-compose command into that new folder]
   - [./scripts/macos.sh]
+  - [cat extensions.txt | xargs -L 1 code --install-extension]
 # - [chsh -s $(which fish), Making fish the default shell]
