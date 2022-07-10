@@ -15,12 +15,15 @@
     "editor.parameterHints.enabled": false,
     "editor.quickSuggestions": {
       "comments": "off",
-      "strings": "off",
-      "other": "off"
+      "other": "off",
+      "strings": "off"
     },
     "editor.renderWhitespace": "all",
     "editor.snippetSuggestions": "none",
     "files.trimTrailingWhitespace": false
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -52,12 +55,14 @@
   "editor.renderControlCharacters": false,
   "editor.renderWhitespace": "all",
   "editor.semanticHighlighting.enabled": true,
-  "editor.snippetSuggestions": "bottom",
+  "editor.snippetSuggestions": "top",
   "editor.suggest.preview": true,
+  "editor.suggest.showMethods": true,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.trimAutoWhitespace": false,
   "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "eslint.debug": true,
   "explorer.autoReveal": true,
   "explorer.experimental.fileNesting.patterns": {
     "*.js": "$(capture).js.map, $(capture).min.js, $(capture).d.ts",
@@ -80,6 +85,8 @@
     "node_modules/": false
   },
   "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "git.mergeEditor": true,
   "gitProjectManager.baseProjectsFolders": [
     "~/Workspaces"
   ],
@@ -111,7 +118,6 @@
     "onSave": "test-file",
     "watch": false
   },
-  "eslint.debug": true,
   "jest.debugCodeLens.showWhenTestStateIn": [
     "fail",
     "pass",
@@ -161,7 +167,7 @@
   // "typescript.inlayHints.parameterNames.enabled": "all",
   // "typescript.inlayHints.variableTypes.enabled": true,
   "window.autoDetectHighContrast": false,
-  "window.zoomLevel": 1,
+  "window.commandCenter": true,
   "workbench.colorCustomizations": {
     "[One Dark Pro]": {
       "tab.activeBorderTop": "#0A84FF"
