@@ -14,7 +14,6 @@
   - '~/.config/fish/conf.d'
   - '~/.config/fish/functions'
   - '~/.config/starship'
-  - '~/.config/starship'
 
 # Create directory for coding projects
 - create:
