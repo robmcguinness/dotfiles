@@ -111,8 +111,6 @@ brew "docker-compose"
 
 brew "macos-trash"
 
-brew "alt-tab"
-
 brew "pulumi"
 brew "awscli"
 
@@ -140,6 +138,7 @@ cask "monitorcontrol"
 cask "appcleaner"
 cask "slack"
 cask "tower"
+cask "notion"
 
 cask "font-cascadia-code"
 cask "font-cascadia-code-pl"
