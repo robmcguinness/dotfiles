@@ -3,6 +3,9 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false
   },
+  "[ignore]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -22,14 +25,12 @@
     "editor.snippetSuggestions": "none",
     "files.trimTrailingWhitespace": false
   },
-  "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
   "css.validate": false,
+  "explorer.fileNesting.enabled": true,
   "debug.allowBreakpointsEverywhere": true,
   "debug.toolBarLocation": "docked",
   "diffEditor.codeLens": true,
@@ -37,7 +38,6 @@
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "on",
   "editor.bracketPairColorization.enabled": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "Cascadia Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
@@ -177,5 +177,8 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.fontAliasing": "default",
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "explorer.fileNesting.patterns": {
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, prettier.config.*,.eslintrc.*,.lintstagedrc.*,.eslintignore, .gitattributes, .editorconfig, .commitlintrc.*, .eslintcache,.gitignore,.npmrc,.prettierignore,.yarnrc.yml"
+  },
 }
