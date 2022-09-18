@@ -4,11 +4,14 @@
     "editor.formatOnSave": false
   },
   "[ignore]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
     "editor.acceptSuggestionOnEnter": "off",
@@ -30,7 +33,6 @@
     "editor.formatOnSave": true
   },
   "css.validate": false,
-  "explorer.fileNesting.enabled": true,
   "debug.allowBreakpointsEverywhere": true,
   "debug.toolBarLocation": "docked",
   "diffEditor.codeLens": true,
@@ -64,12 +66,13 @@
   "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
   "eslint.debug": true,
   "explorer.autoReveal": true,
-  "explorer.experimental.fileNesting.patterns": {
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
     "*.js": "$(capture).js.map, $(capture).min.js, $(capture).d.ts",
     "*.jsx": "$(capture).js",
     "*.ts": "$(capture).js, $(capture).*.ts",
     "*.tsx": "$(capture).ts",
-    "package.json": "package-lock.json, .npmrc, yarn.lock, .yarnrc, pnpm-lock.yaml, .yarnrc.yml, .prettierrc.js, turbo.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, prettier.config.*,.eslintrc.*,.lintstagedrc.*,.eslintignore, .gitattributes, .editorconfig, .commitlintrc.*, .eslintcache,.gitignore,.npmrc,.prettierignore,.yarnrc.yml, turbo.json, jest.config.ts, pnpm-workspace.yaml",
     "tsconfig.json": "tsconfig.*.json"
   },
   "files.associations": {
@@ -130,23 +133,9 @@
   "prettier.requireConfig": true,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
+  "redhat.telemetry.enabled": false,
   "search.mode": "reuseEditor",
   "search.searchEditor.defaultNumberOfContextLines": 2,
-  "semgrep.rules": "https://semgrep.dev/p/r2c-security-audit",
-  "tailwindCSS.experimental.classRegex": [
-    [
-      "clsx\\(([^)]*)\\)",
-      "'([^']*)'"
-    ],
-    [
-      "baseStyle.=.[\"'`]([^\"'`]*)"
-    ]
-  ],
-  "tailwindCSS.includeLanguages": {
-    "javascriptreact": "html",
-    "plaintext": "html",
-    "typescriptreact": "html"
-  },
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.osx": "fish",
@@ -177,8 +166,35 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.fontAliasing": "default",
+  "workbench.iconTheme": "symbols",
   "workbench.sideBar.location": "right",
-  "explorer.fileNesting.patterns": {
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, prettier.config.*,.eslintrc.*,.lintstagedrc.*,.eslintignore, .gitattributes, .editorconfig, .commitlintrc.*, .eslintcache,.gitignore,.npmrc,.prettierignore,.yarnrc.yml"
-  },
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ]
 }
