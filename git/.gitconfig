@@ -81,3 +81,5 @@
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[init]
+	defaultBranch = main
