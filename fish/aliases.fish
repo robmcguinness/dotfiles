@@ -25,3 +25,5 @@ alias gua='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pu
 alias cm="clean-mark"
 
 alias tower="gittower"
+
+alias pn=pnpm
