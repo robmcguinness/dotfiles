@@ -1,5 +1,11 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Timeout for starship to scan files (in milliseconds).
 scan_timeout = 200
-add_newline = true
+
+# Timeout for commands executed by starship (in milliseconds).
+command_timeout = 600
 
 [nix_shell]
 disabled = true

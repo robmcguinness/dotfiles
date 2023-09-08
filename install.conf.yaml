@@ -35,7 +35,7 @@
     ~/.zshrc: zsh/.zshrc
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
-    ~/.config/starship/starship.toml:
+    ~/.config/starship.toml:
       path: starship/starship.toml
       create: true
     ~/.gitattributes: git/.gitattributes
