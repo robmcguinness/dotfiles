@@ -90,7 +90,7 @@ brew "fzf"
 brew "netcat"
 
 # A better `ls`
-brew "exa"
+brew "eza"
 
 # A beter man pages
 brew "tealdeer"
