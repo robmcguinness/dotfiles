@@ -1,7 +1,5 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "rs/tap"
 tap "pulumi/tap"
@@ -103,6 +101,9 @@ brew "grex"
 
 # View markdown in the terminal
 brew "glow"
+
+# A simple command line interface for the Mac App Store.
+brew "mas"
 
 # Docker
 brew "colima"

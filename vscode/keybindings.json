@@ -1,5 +1,10 @@
 [
   {
+  "key": "cmd+shift+s",
+  "command": "typescript.goToSourceDefinition",
+  "when": "editorTextFocus"
+  },
+  {
     "key": "shift+cmd+x",
     "command": "editor.action.deleteLines",
     "when": "!terminalFocus"

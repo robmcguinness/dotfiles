@@ -1,21 +1,33 @@
 {
+  "[css]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
   "[handlebars]": {
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false
   },
-  "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+  "[html]": {
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "biomejs.biome",
     "editor.formatOnSave": true
   },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[markdown]": {
     "editor.acceptSuggestionOnEnter": "off",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "biomejs.biome",
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
     "editor.parameterHints.enabled": false,
@@ -29,17 +41,26 @@
     "files.trimTrailingWhitespace": false
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "biomejs.biome",
     "editor.formatOnSave": true
   },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "biome.requireConfiguration": false,
+  "cSpell.numSuggestions": 0,
   "css.validate": false,
   "debug.allowBreakpointsEverywhere": true,
   "debug.toolBarLocation": "docked",
   "diffEditor.codeLens": true,
   "diffEditor.ignoreTrimWhitespace": true,
-  "diffEditor.renderSideBySide": false,
-  "editor.acceptSuggestionOnEnter": "on",
   "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit"
+  },
   "editor.fontFamily": "Cascadia Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
@@ -49,18 +70,23 @@
   "editor.formatOnType": true,
   "editor.guides.bracketPairs": true,
   "editor.insertSpaces": true,
-  "editor.largeFileOptimizations": false,
+  // "editor.largeFileOptimizations": false,
   "editor.matchBrackets": "always",
-  "editor.maxTokenizationLineLength": 10000,
+  "editor.maxTokenizationLineLength": 40000,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
+  // "editor.quickSuggestions": {
+  //   "comments": "off",
+  //   "other": "off",
+  //   "strings": "off"
+  // },
   "editor.renderControlCharacters": false,
   "editor.renderWhitespace": "all",
   "editor.semanticHighlighting.enabled": true,
-  "editor.snippetSuggestions": "top",
-  "editor.suggest.preview": true,
-  "editor.suggest.showMethods": true,
-  "editor.suggestSelection": "first",
+  // "editor.snippetSuggestions": "none",
+  // "editor.suggest.preview": true,
+  // "editor.suggest.showMethods": true,
+  // "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.trimAutoWhitespace": false,
   "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
@@ -68,11 +94,15 @@
   "explorer.autoReveal": true,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
+    "*.css": "$(capture).css.map, $(capture).*.css",
     "*.js": "$(capture).js.map, $(capture).min.js, $(capture).d.ts",
     "*.jsx": "$(capture).js",
     "*.ts": "$(capture).js, $(capture).*.ts",
     "*.tsx": "$(capture).ts",
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, prettier.config.*,.eslintrc.*,.lintstagedrc.*,.eslintignore, .gitattributes, .editorconfig, .commitlintrc.*, .eslintcache,.gitignore,.npmrc,.prettierignore,.yarnrc.yml, turbo.json, jest.config.ts, pnpm-workspace.yaml",
+    ".env": "*.env, .env.*, .envrc, env.d.ts",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, prettier.config.*, prettierrc.*,.eslintrc.*,eslint.config.*,.lintstagedrc.*,.eslintignore, .gitattributes, .editorconfig, .commitlintrc.*, .eslintcache,.gitignore,.npmrc,.prettierignore,.yarnrc.yml,turbo.json,jest.config.*,pnpm-workspace.yaml,plopfile.*,tsconfig.*,biome.json,lefthook.yml",
+    "readme*": "authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors*, ecosystem*",
     "tsconfig.json": "tsconfig.*.json"
   },
   "files.associations": {
@@ -88,7 +118,7 @@
     "node_modules/": false
   },
   "files.trimTrailingWhitespace": true,
-  "git.autofetch": true,
+  // "git.autofetch": true,
   "git.mergeEditor": true,
   "gitProjectManager.baseProjectsFolders": [
     "~/Workspaces"
@@ -115,27 +145,26 @@
   "html.format.enable": true,
   "html.format.indentHandlebars": true,
   "html.format.maxPreserveNewLines": 0,
-  "javascript.suggestionActions.enabled": false,
+  "javascript.suggestionActions.enabled": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "jest.autoRun": {
     "onSave": "test-file",
     "watch": false
   },
-  "jest.debugCodeLens.showWhenTestStateIn": [
-    "fail",
-    "pass",
-    "skip",
-    "unknown"
-  ],
   "jest.debugMode": true,
-  "jest.enableCodeLens": true,
   "jest.showCoverageOnLoad": false,
   "prettier.requireConfig": true,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
   "redhat.telemetry.enabled": false,
+  "screencastMode.fontSize": 30,
+  "screencastMode.keyboardOptions": {
+    "showKeys": false
+  },
+  "screencastMode.keyboardOverlayTimeout": 900,
   "search.mode": "reuseEditor",
   "search.searchEditor.defaultNumberOfContextLines": 2,
+  "symbols.hidesExplorerArrows": false,
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.osx": "fish",
@@ -148,26 +177,24 @@
     }
   },
   "terminal.integrated.tabs.enabled": false,
-  "typescript.suggest.paths": false,
+  // "typescript.suggest.paths": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vsicons.dontShowNewVersionMessage": true,
-  // "javascript.inlayHints.parameterNames.enabled": "all",
-  // "javascript.inlayHints.variableTypes.enabled": true,
-  // "typescript.inlayHints.parameterNames.enabled": "all",
-  // "typescript.inlayHints.variableTypes.enabled": true,
   "window.autoDetectHighContrast": false,
   "window.commandCenter": true,
+  "window.zoomLevel": 0,
   "workbench.colorCustomizations": {
     "[One Dark Pro]": {
       "tab.activeBorderTop": "#0A84FF"
     }
   },
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "Darcula",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.fontAliasing": "default",
   "workbench.iconTheme": "symbols",
   "workbench.sideBar.location": "right",
+  "workbench.tree.enableStickyScroll": true,
   "yaml.customTags": [
     "!And",
     "!And sequence",

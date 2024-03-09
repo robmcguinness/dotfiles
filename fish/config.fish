@@ -11,8 +11,10 @@ zoxide init fish | source
 fnm env | source
 
 set -gx PYENV_ROOT "$HOME/.pyenv"
-fish_add_path -U /usr/local/bin "$PYENV_ROOT/bin" "$HOME/.cargo/bin"
+set -gx PNPM_HOME "$HOME/Library/pnpm"
+
+fish_add_path -U /usr/local/bin "$PYENV_ROOT/bin" "$HOME/.cargo/bin" "$PNPM_HOME"
+
 # pyenv init
-status is-interactive; and pyenv init --path | source
-
-
+status is-interactive
+and pyenv init --path | source
