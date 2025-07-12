@@ -2,7 +2,6 @@
 
 > macOS setup script
 
-![optimus prime](optimus.gif)
 
 ## Features
 
