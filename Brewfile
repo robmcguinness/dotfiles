@@ -40,6 +40,9 @@ brew "zoxide"
 brew "grep"
 brew "openssl"
 
+# Github CLI
+brew "gh"
+
 
 # Simple, fast and user-friendly alternative to find
 brew "fd"
@@ -120,6 +123,7 @@ brew "awscli"
 cask "syntax-highlight", args: { no_quarantine: true }
 cask "qlstephen"
 cask "qlmarkdown", args: { no_quarantine: true }
+
 
 # Screen recording software
 cask "kap"
