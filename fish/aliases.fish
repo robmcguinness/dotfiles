@@ -27,3 +27,7 @@ alias cm="clean-mark"
 alias tower="gittower"
 
 alias pn=pnpm
+
+alias ci='code-insiders'
+
+alias cc='claude'

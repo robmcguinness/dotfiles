@@ -118,6 +118,11 @@ brew "macos-trash"
 brew "pulumi"
 brew "awscli"
 
+brew "opencode"
+brew "repomix"
+brew "rust"
+brew "act"
+
 
 # quicklook hotness
 cask "syntax-highlight", args: { no_quarantine: true }
@@ -129,7 +134,6 @@ cask "qlmarkdown", args: { no_quarantine: true }
 cask "kap"
 
 cask "alfred"
-cask "lastpass"
 cask "suspicious-package"
 cask "brave-browser"
 cask "iterm2"
@@ -140,10 +144,11 @@ cask "discord"
 cask "itsycal"
 cask "spotify"
 cask "monitorcontrol"
-cask "appcleaner"
-cask "slack"
 cask "tower"
-cask "notion"
+cask "betterdisplay"
+cask "dbeaver-community"
+cask "superwhisper"
+cask "tower"
 
 cask "font-cascadia-code"
 cask "font-cascadia-code-pl"
