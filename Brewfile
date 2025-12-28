@@ -123,6 +123,24 @@ brew "repomix"
 brew "rust"
 brew "act"
 
+# Better git diff viewer
+brew "git-delta"
+
+# Terminal UI for git
+brew "lazygit"
+
+# Better top/htop
+brew "btop"
+
+# Better df
+brew "duf"
+
+# jq for YAML
+brew "yq"
+
+# Better curl for APIs
+brew "xh"
+
 
 # quicklook hotness
 cask "syntax-highlight", args: { no_quarantine: true }
@@ -134,8 +152,6 @@ cask "qlmarkdown", args: { no_quarantine: true }
 cask "kap"
 
 cask "alfred"
-cask "suspicious-package"
-cask "brave-browser"
 cask "iterm2"
 cask "open-in-code"
 cask "rectangle"
@@ -148,8 +164,7 @@ cask "tower"
 cask "betterdisplay"
 cask "dbeaver-community"
 cask "superwhisper"
-cask "tower"
 
 cask "font-cascadia-code"
-cask "font-cascadia-code-pl"
+cask "font-cascadia-code-nf"
 

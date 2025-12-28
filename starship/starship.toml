@@ -1,23 +1,60 @@
-# Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
-
-# Timeout for starship to scan files (in milliseconds).
 scan_timeout = 200
+command_timeout = 500
 
-# Timeout for commands executed by starship (in milliseconds).
-command_timeout = 600
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$python\
+$rust\
+$cmd_duration\
+$line_break\
+$character"""
 
+[character]
+success_symbol = '[>](bold green)'
+error_symbol = '[>](bold red)'
+
+[directory]
+truncation_length = 4
+truncate_to_repo = true
+style = 'bold cyan'
+
+[git_branch]
+format = '[$symbol$branch]($style) '
+symbol = ''
+style = 'bold purple'
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = 'bold yellow'
+
+[cmd_duration]
+min_time = 2000
+format = '[$duration]($style) '
+
+[nodejs]
+format = '[$symbol$version]($style) '
+symbol = ' '
+
+[python]
+format = '[$symbol$virtualenv]($style) '
+symbol = ' '
+
+[rust]
+format = '[$symbol$version]($style) '
+symbol = ' '
+
+# Disable unused
 [nix_shell]
 disabled = true
-
 [dart]
 disabled = true
-
 [dotnet]
 disabled = true
-
 [elm]
 disabled = true
-
 [erlang]
 disabled = true
