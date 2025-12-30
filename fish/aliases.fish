@@ -31,9 +31,9 @@ alias cm="clean-mark"
 alias tower="gittower"
 
 alias pn=pnpm
+alias px='pnpm dlx'
 
 alias ci='code-insiders'
-
 alias cc='claude'
 
 # Modern tool aliases
