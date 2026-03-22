@@ -1,5 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "rs/tap"
 tap "pulumi/tap"
@@ -32,7 +30,8 @@ brew "wget"
 # homebrew version of curl did not work downloading certain files. Investigating...
 brew "curl"
 
-brew "pyenv"
+brew "mise"
+brew "uv"
 
 brew "zoxide"
 
@@ -56,10 +55,6 @@ brew "git-extras"
 brew "tree"
 
 # shells
-brew "zsh-autosuggestions"
-brew "zsh-completions"
-brew "zsh-syntax-highlighting"
-
 brew "fish"
 brew "fisher"
 

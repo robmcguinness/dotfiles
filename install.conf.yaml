@@ -21,6 +21,7 @@
     - ~/Workspaces
     - ~/Dev
     - ~/Dev/homebrew
+    - ~/Screenshots
 
 - link:
     ~/Brewfile:
@@ -35,6 +36,8 @@
     ~/.zshrc: zsh/.zshrc
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
+    ~/Library/Application Support/Code - Insiders/User/settings.json: vscode/settings.json
+    ~/Library/Application Support/Code - Insiders/User/keybindings.json: vscode/keybindings.json
     ~/.config/starship.toml:
       path: starship/starship.toml
       create: true
@@ -53,4 +56,5 @@
   - [ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose, Symlink the docker-compose command into that new folder]
   - [./scripts/macos.sh]
   - [cat extensions.txt | xargs -L 1 code --install-extension]
-# - [chsh -s $(which fish), Making fish the default shell]
+  - [grep -qxF "$HOME/Dev/homebrew/bin/fish" /etc/shells || echo "$HOME/Dev/homebrew/bin/fish" | sudo tee -a /etc/shells, Adding fish to /etc/shells]
+  - [chsh -s $HOME/Dev/homebrew/bin/fish, Making fish the default shell]

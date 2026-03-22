@@ -2,21 +2,27 @@ set fish_greeting
 
 set -x EDITOR "code-insiders"
 
-fish_add_path $HOME/Dev/homebrew/bin $HOME/Dev/homebrew/sbin /usr/local/bin $HOME/.cargo/env
+fish_add_path $HOME/Dev/homebrew/bin $HOME/Dev/homebrew/sbin /usr/local/bin $HOME/.cargo/env $HOME/.local/bin
 
 . ~/.config/fish/aliases.fish
 
 starship init fish | source
 zoxide init fish | source
-fnm env | source
 
-set -gx PYENV_ROOT "$HOME/.pyenv"
+# Lazy-load fnm: only activate when changing directories
 set -gx PNPM_HOME "$HOME/Library/pnpm"
+fish_add_path "$PNPM_HOME"
 
-fish_add_path "$PYENV_ROOT/bin" "$PNPM_HOME"
+if type -q fnm
+    fnm env --shell fish | source
+    function _fnm_autoload --on-variable PWD
+        if test -e .node-version -o -e .nvmrc
+            fnm use --silent-if-unchanged 2>/dev/null
+        end
+    end
+end
 
-# pyenv init
-status is-interactive
-and pyenv init --path | source
-
-string match -g "$TERM_PROGRAM" "vscode-insiders" and "/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh" | source
+# mise (replaces pyenv for Python version management)
+if type -q mise
+    mise activate fish | source
+end
