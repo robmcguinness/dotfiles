@@ -18,7 +18,7 @@ A comprehensive dotfiles repository for setting up a fully-configured macOS deve
 |----------|-------|
 | Shell | Fish, Zsh |
 | Prompt | Starship |
-| Editor | VS Code |
+| Editor | VSCodium / VS Code |
 | Terminal | iTerm2 |
 | Package Manager | Homebrew |
 | Bootstrap | Dotbot |
@@ -53,13 +53,13 @@ A comprehensive dotfiles repository for setting up a fully-configured macOS deve
 - **lazygit** - Terminal UI for git
 - **Docker** - Via Colima container runtime
 - **GitHub CLI** - Repository and PR management
-- **VS Code** - 25 extensions, custom settings and keybindings
+- **VSCodium / VS Code** - 25 extensions, shared settings and keybindings (linked into VSCodium, Code, Code - Insiders)
 
 ### Package & Version Management
 
 - **Homebrew** - Installed at `~/Dev/homebrew` (non-system location)
 - **fnm** - Fast Node.js version manager
-- **pyenv** - Python version manager
+- **mise** - Python (and other runtime) version manager
 - **pnpm** - Fast npm alternative
 
 ### Custom Functions

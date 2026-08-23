@@ -55,3 +55,5 @@ alias pubip='curl -s ifconfig.me'
 alias dk='docker'
 alias dkc='docker compose'
 alias dkps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
+
+alias co='codium'

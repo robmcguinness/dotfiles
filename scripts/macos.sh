@@ -14,8 +14,8 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
-# Disable the "Are you sure you want to open this application?" dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+# Save to disk (not iCloud) by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Disable smart quotes as they're annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
@@ -35,6 +35,9 @@ defaults write NSGlobalDomain NSWindowShouldDragOnGesture -bool true
 ###############################################################################
 # Keyboard                                                                    #
 ###############################################################################
+
+# Enable key repeat (instead of the accent popup) in all apps
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 2
@@ -59,6 +62,13 @@ defaults write com.apple.screencapture disable-shadow -bool true
 
 # Show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show external/removable drives on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+# Remove items from Trash after 30 days
+defaults write com.apple.finder FXRemoveOldTrashItems -bool true
 
 # Show status bar
 defaults write com.apple.finder ShowStatusBar -bool true

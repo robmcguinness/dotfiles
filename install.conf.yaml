@@ -29,6 +29,9 @@
     ~/.editorconfig: editorconfig/.editorconfig
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/fish_plugins: fish/fish_plugins
+    ~/.config/fish/conf.d:
+        path: fish/conf.d/*.fish
+        glob: true
     ~/.config/fish/functions:
         path: fish/functions/*.fish
         glob: true
@@ -38,6 +41,8 @@
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
     ~/Library/Application Support/Code - Insiders/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code - Insiders/User/keybindings.json: vscode/keybindings.json
+    ~/Library/Application Support/VSCodium/User/settings.json: vscode/settings.json
+    ~/Library/Application Support/VSCodium/User/keybindings.json: vscode/keybindings.json
     ~/.config/starship.toml:
       path: starship/starship.toml
       create: true
@@ -48,13 +53,4 @@
 
 
 - shell:
-  - [curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $HOME/Dev/homebrew, Installing Homebrew]
-  - [eval "$($HOME/Dev/homebrew/bin/brew shellenv)", Set Homebrew path]
-  - [$HOME/Dev/homebrew/bin/brew bundle, Running brew bundle]
-  - [$HOME/Dev/homebrew/bin/fish -c "fisher update"]
-  - [mkdir -p ~/.docker/cli-plugins, configure docker-compose as a Docker plugin]
-  - [ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose, Symlink the docker-compose command into that new folder]
-  - [./scripts/macos.sh]
-  - [cat extensions.txt | xargs -L 1 code --install-extension]
-  - [grep -qxF "$HOME/Dev/homebrew/bin/fish" /etc/shells || echo "$HOME/Dev/homebrew/bin/fish" | sudo tee -a /etc/shells, Adding fish to /etc/shells]
-  - [chsh -s $HOME/Dev/homebrew/bin/fish, Making fish the default shell]
+  - [./scripts/bootstrap.sh, Bootstrapping Homebrew, packages, plugins and macOS defaults]

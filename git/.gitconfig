@@ -2,8 +2,8 @@
   path = ~/.gitconfig-private
 
 [core]
-  editor = code --wait
   pager = delta
+  editor = codium --wait
 
 [interactive]
   diffFilter = delta --color-only
@@ -17,13 +17,13 @@
     tool = default-difftool
 
 [difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+    cmd = codium --wait --diff $LOCAL $REMOTE
 [difftool]
   prompt = false
 [merge]
     tool = vscode
 [mergetool "vscode"]
-    cmd = code --wait $MERGED
+    cmd = codium --wait $MERGED
     prompt = false
 [color]
   ui = auto

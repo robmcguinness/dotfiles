@@ -1,6 +1,8 @@
 tap "homebrew/services"
-tap "rs/tap"
-tap "pulumi/tap"
+tap "modem-dev/tap"
+
+# Skip Gatekeeper quarantine for all casks (faster first launch, no prompts)
+cask_args no_quarantine: true
 
 # prompt
 brew "starship"
@@ -100,9 +102,6 @@ brew "grex"
 # View markdown in the terminal
 brew "glow"
 
-# A simple command line interface for the Mac App Store.
-brew "mas"
-
 # Docker
 brew "colima"
 brew "docker"
@@ -115,7 +114,8 @@ brew "awscli"
 
 brew "opencode"
 brew "repomix"
-brew "rust"
+# Rust toolchain manager (run `rustup default stable` once)
+brew "rustup"
 brew "act"
 
 # Better git diff viewer
@@ -133,14 +133,45 @@ brew "duf"
 # jq for YAML
 brew "yq"
 
+# Linters / code search
+brew "biome"
+brew "ast-grep"
+brew "modem-dev/tap/hunk"
+
+# Terminal multiplexer
+brew "tmux"
+
+# zsh fallback plugins
+brew "zsh-autosuggestions"
+brew "zsh-completions"
+brew "zsh-syntax-highlighting"
+
+# Build tools
+brew "openssh"
+brew "cmake"
+brew "ninja"
+brew "meson"
+brew "autoconf"
+brew "automake"
+brew "libtool"
+brew "qemu"
+brew "mole"
+
+# Python (legacy; mise is the primary manager)
+brew "pyenv"
+brew "python@3.12"
+brew "python@3.11"
+
 # Better curl for APIs
 brew "xh"
 
 
 # quicklook hotness
-cask "syntax-highlight", args: { no_quarantine: true }
+cask "syntax-highlight"
 cask "qlstephen"
-cask "qlmarkdown", args: { no_quarantine: true }
+cask "qlmarkdown"
+cask "quicklook-csv"
+cask "quicklook-video"
 
 
 # Screen recording software
@@ -157,10 +188,20 @@ cask "itsycal"
 cask "spotify"
 cask "monitorcontrol"
 cask "tower"
+cask "vscodium"
+cask "zed"
+cask "alt-tab"
+cask "codiff"
+cask "fontsmoothingadjuster"
+cask "jan"
+cask "keycastr"
+cask "lastpass"
+cask "notion"
 cask "betterdisplay"
 cask "dbeaver-community"
 cask "superwhisper"
 
 cask "font-cascadia-code"
 cask "font-cascadia-code-nf"
+cask "font-cascadia-code-pl"
 

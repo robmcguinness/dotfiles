@@ -26,8 +26,6 @@
   "biome.suggestInstallingGlobally": false,
   "cSpell.numSuggestions": 0,
   "cSpell.textDecoration": "underline wavy #fc9867 auto",
-  "chat.agent.maxRequests": 500,
-  "chat.mcp.discovery.enabled": true,
   "debug.allowBreakpointsEverywhere": true,
   "debug.toolBarLocation": "docked",
   "diffEditor.codeLens": true,
@@ -38,7 +36,6 @@
     "source.fixAll.biome": "explicit",
     "source.organizeImports.biome": "explicit"
   },
-  // "typescript.inlayHints.parameterNames.enabled": "all",
   "editor.fontFamily": "Cascadia Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
@@ -82,10 +79,6 @@
     "*.mdx": "mdx"
   },
   "files.exclude": {
-    "**/.classpath": true,
-    "**/.factorypath": true,
-    "**/.project": true,
-    "**/.settings": true,
     "dist/": false,
     "lib/": false,
     "node_modules/": false
@@ -102,11 +95,6 @@
     "node_modules"
   ],
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
-  "github.copilot.chat.commitMessageGeneration.instructions": [
-    {
-      "text": "Follow the conventional commit message format. Limit the first line to 72 characters or less."
-    }
-  ],
   "github.copilot.nextEditSuggestions.fixes": false,
   "html.format.enable": true,
   "html.format.indentHandlebars": true,
@@ -119,8 +107,6 @@
   "screencastMode.keyboardOptions": {
     "showKeys": false
   },
-  // "screencastMode.keyboardOverlayTimeout": 900,
-  // "search.mode": "reuseEditor",
   "search.searchEditor.defaultNumberOfContextLines": 2,
   "telemetry.telemetryLevel": "off",
   "terminal.external.osxExec": "iTerm.app",
