@@ -2,15 +2,18 @@
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "[json][jsonc][javascript][yaml][javascriptreact][typescript][typescriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "oxc.oxc-vscode"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[markdown]": {
     "editor.acceptSuggestionOnEnter": "off",
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "oxc.oxc-vscode",
     "editor.formatOnPaste": false,
     "editor.parameterHints.enabled": false,
     "editor.quickSuggestions": {
@@ -22,20 +25,21 @@
     "editor.snippetSuggestions": "none",
     "files.trimTrailingWhitespace": false
   },
+  "[mdx]": {
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+  },
   "application.shellEnvironmentResolutionTimeout": 40,
-  "biome.suggestInstallingGlobally": false,
-  "cSpell.numSuggestions": 0,
-  "cSpell.textDecoration": "underline wavy #fc9867 auto",
+  "chat.viewSessions.orientation": "stacked",
+  "claudeCode.preferredLocation": "panel",
   "debug.allowBreakpointsEverywhere": true,
   "debug.toolBarLocation": "docked",
   "diffEditor.codeLens": true,
   "diffEditor.experimental.useTrueInlineView": true,
   "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
+  "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.bracketPairColorization.enabled": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.biome": "explicit",
-    "source.organizeImports.biome": "explicit"
-  },
+  "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.fontFamily": "Cascadia Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
@@ -57,6 +61,7 @@
   "editor.renderControlCharacters": false,
   "editor.renderWhitespace": "all",
   "editor.semanticHighlighting.enabled": true,
+  "editor.suggest.insertMode": "replace",
   "editor.suggestOnTriggerCharacters": true,
   "editor.tabSize": 2,
   "editor.trimAutoWhitespace": false,
@@ -64,24 +69,19 @@
   "explorer.autoReveal": true,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
+    ".env": "*.env, .env.*, .envrc, env.d.ts",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
     "*.css": "$(capture).css.map, $(capture).*.css",
     "*.js": "$(capture).js.map, $(capture).min.js, $(capture).d.ts",
     "*.jsx": "$(capture).js",
     "*.ts": "$(capture).js, $(capture).*.ts",
     "*.tsx": "$(capture).ts",
-    ".env": "*.env, .env.*, .envrc, env.d.ts",
-    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, prettier.config.*, prettierrc.*,.eslintrc.*,eslint.config.*,.lintstagedrc.*,.eslintignore, .gitattributes, .editorconfig, .commitlintrc.*, .eslintcache,.gitignore,.npmrc,.prettierignore,.yarnrc.yml,turbo.json,jest.config.*,pnpm-workspace.yaml,plopfile.*,tsconfig.*,biome.json,lefthook.yml",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, prettier.config.*, prettierrc.*,.eslintrc.*,eslint.config.*,.lintstagedrc.*,.eslintignore, .gitattributes, .editorconfig, .commitlintrc.*, .eslintcache,.gitignore,.npmrc,.prettierignore,.yarnrc.yml,turbo.json,jest.config.*,pnpm-workspace.yaml,plopfile.*,tsconfig.*,biome.json,lefthook.yml,oxlint.config.*, oxfmt.config.*",
     "readme*": "authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors*, ecosystem*",
     "tsconfig.json": "tsconfig.*.json"
   },
   "files.associations": {
     "*.mdx": "mdx"
-  },
-  "files.exclude": {
-    "dist/": false,
-    "lib/": false,
-    "node_modules/": false
   },
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
@@ -95,37 +95,36 @@
     "node_modules"
   ],
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
-  "github.copilot.nextEditSuggestions.fixes": false,
   "html.format.enable": true,
   "html.format.indentHandlebars": true,
   "html.format.maxPreserveNewLines": 0,
-  "javascript.suggestionActions.enabled": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "npm-intellisense.packageSubfoldersIntellisense": true,
-  "npm-intellisense.scanDevDependencies": true,
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
+  "js/ts.suggest.autoImports": true,
+  "js/ts.suggestionActions.enabled": true,
+  "js/ts.tsserver.experimental.enableProjectDiagnostics": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "json.schemaDownload.trustedDomains": {
+    "https://turbo.build/schema.json": true,
+    "https://ui.shadcn.com/schema.json": true
+  },
   "screencastMode.fontSize": 30,
   "screencastMode.keyboardOptions": {
     "showKeys": false
   },
   "search.searchEditor.defaultNumberOfContextLines": 2,
   "telemetry.telemetryLevel": "off",
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.external.osxExec": "Ghostty.app",
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.fontFamily": "Cascadia Code PL",
   "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.inheritEnv": false,
-  "terminal.integrated.profiles.osx": {
-    "fish": {
-      "path": "${env:HOME}/Dev/homebrew/bin/fish"
-    }
-  },
+  "terminal.integrated.shellIntegration.enabled": false,
   "terminal.integrated.tabs.enabled": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
   "window.autoDetectHighContrast": false,
   "window.commandCenter": true,
   "window.nativeTabs": true,
+  "window.title": "${rootNameShort}",
   "workbench.colorCustomizations": {
     "[Aura Dark]": {
       "activityBar.activeBackground": "#0b0b0c",
@@ -151,7 +150,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.fontAliasing": "default",
-  "workbench.iconTheme": "vs-seti",
+  "workbench.iconTheme": "symbols",
   "workbench.sideBar.location": "right",
   "workbench.tree.enableStickyScroll": true
 }

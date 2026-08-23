@@ -96,8 +96,6 @@ brew "tealdeer"
 # bandwhich is a CLI utility for displaying current network utilization by process, connection and remote IP or hostname.
 brew "bandwhich"
 
-# grex is a command-line tool and library for generating regular expressions from user-provided test cases.
-brew "grex"
 
 # View markdown in the terminal
 brew "glow"
@@ -109,20 +107,12 @@ brew "docker-compose"
 
 brew "macos-trash"
 
-brew "pulumi"
 brew "awscli"
 
 brew "opencode"
-brew "repomix"
 # Rust toolchain manager (run `rustup default stable` once)
 brew "rustup"
-brew "act"
 
-# Better git diff viewer
-brew "git-delta"
-
-# Terminal UI for git
-brew "lazygit"
 
 # Better top/htop
 brew "btop"
@@ -148,22 +138,8 @@ brew "zsh-syntax-highlighting"
 
 # Build tools
 brew "openssh"
-brew "cmake"
-brew "ninja"
-brew "meson"
-brew "autoconf"
-brew "automake"
-brew "libtool"
 brew "qemu"
 brew "mole"
-
-# Python (legacy; mise is the primary manager)
-brew "pyenv"
-brew "python@3.12"
-brew "python@3.11"
-
-# Better curl for APIs
-brew "xh"
 
 
 # quicklook hotness
@@ -174,32 +150,23 @@ cask "quicklook-csv"
 cask "quicklook-video"
 
 
-# Screen recording software
-cask "kap"
-
 cask "alfred"
-cask "iterm2"
+cask "ghostty"
+cask "spotify"
 cask "open-in-code"
 cask "rectangle"
 cask "visual-studio-code"
 cask "visual-studio-code@insiders"
 cask "discord"
 cask "itsycal"
-cask "spotify"
 cask "monitorcontrol"
 cask "tower"
 cask "vscodium"
 cask "zed"
-cask "alt-tab"
 cask "codiff"
 cask "fontsmoothingadjuster"
-cask "jan"
 cask "keycastr"
-cask "lastpass"
-cask "notion"
 cask "betterdisplay"
-cask "dbeaver-community"
-cask "superwhisper"
 
 cask "font-cascadia-code"
 cask "font-cascadia-code-nf"
