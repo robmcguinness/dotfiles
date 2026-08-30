@@ -1,19 +1,30 @@
-# Open a herdr orchestration tab: 2×2 grid with Claude fable, Claude opus,
-# Codex (gpt-5.6-sol, high reasoning) and `hunk diff --watch`.
-# Extra args are forwarded verbatim to both claude panes.
+# Open a herdr orchestration layout: Claude fable, Claude opus, Codex
+# (gpt-5.6-sol, high reasoning) and `hunk diff --watch`.
+#
+# Layouts (--layout, default: tabs):
+#   tabs  one tab per agent — fable, opus, codex, hunk (4 tabs)
+#   grid  the original 2×2 single-tab grid
+#
+# All other args are forwarded verbatim to both claude panes.
 #
 #     ❯ orc --plugin-dir ~/Workspaces/rm3-claude-plugin --chrome
-#     orc › dotfiles  (2×2 herdr grid)
+#     orc › dotfiles  (agent per tab)
 #       ✓ preflight (herdr, jq, git, claude, codex, hunk)
-#       ✓ tab created  wG:t4
-#       ✓ panes split  4/4
+#       ✓ tabs created  4/4
 #       ✓ dotfiles-fable  claude --model fable --effort high --plugin-dir … --chrome
-#       ✓ dotfiles-opus   claude --model opus --effort high --plugin-dir … --chrome
+#       ✓ dotfiles-opus   claude --model opus --effort medium --plugin-dir … --chrome
 #       ✓ dotfiles-codex  codex -m gpt-5.6-sol -c model_reasoning_effort=high
 #       ✓ dotfiles-hunk   hunk diff --watch
 #     done in 14s → herdr agent prompt dotfiles-fable "..."
 #
-function orc --description 'Open a 2×2 herdr tab: claude fable, claude opus, codex, hunk --watch'
+#     ❯ orc --layout grid
+#     orc › dotfiles  (2×2 herdr grid)
+#       ✓ preflight (herdr, jq, git, claude, codex, hunk)
+#       ✓ tab created  wG:t4
+#       ✓ panes split  4/4
+#       …
+#
+function orc --description 'Open a herdr orc layout: claude fable, claude opus, codex, hunk --watch (--layout tabs|grid)'
     set -l started (date +%s)
 
     # ---- helpers -----------------------------------------------------------
@@ -31,6 +42,17 @@ function orc --description 'Open a 2×2 herdr tab: claude fable, claude opus, co
             return $rc
         end
         printf '%s\n' $out
+    end
+
+    # ---- args --------------------------------------------------------------
+    # --ignore-unknown: everything that is not --layout keeps flowing to the
+    # claude panes untouched (e.g. --plugin-dir, --chrome).
+    argparse --ignore-unknown 'layout=' -- $argv; or return 1
+    set -l layout tabs
+    set -q _flag_layout; and set layout $_flag_layout
+    if not contains -- $layout tabs grid
+        __orc_fail "invalid --layout '$layout' (expected: tabs, grid)"
+        return 1
     end
 
     # ---- preflight ---------------------------------------------------------
@@ -72,35 +94,61 @@ function orc --description 'Open a 2×2 herdr tab: claude fable, claude opus, co
     set -l name_codex $names[3]
     set -l name_hunk "$base-hunk"
 
-    set_color --bold; echo -n "orc › $repo"; set_color normal; echo '  (2×2 herdr grid)'
+    set -l layout_label '  (agent per tab)'
+    test $layout = grid; and set layout_label '  (2×2 herdr grid)'
+    set_color --bold; echo -n "orc › $repo"; set_color normal; echo $layout_label
     __orc_ok 'preflight (herdr, jq, git, claude, codex, hunk)'
 
     # ---- layout ------------------------------------------------------------
-    set -l json (__orc_run herdr tab create --cwd $PWD --label "orc: $repo" --no-focus); or begin
-        __orc_fail 'tab create'; return 1
-    end
-    set -l tab_id (printf '%s\n' $json | jq -r '.result.tab.tab_id')
-    set -l p1 (printf '%s\n' $json | jq -r '.result.root_pane.pane_id')
-    __orc_ok "tab created  $tab_id"
+    # declared up front: `set -l` inside the if/else below would be block-scoped
+    set -l p1 ''; set -l p2 ''; set -l p3 ''; set -l p4 ''
+    set -l focus_tab ''
+    if test $layout = grid
+        set -l json (__orc_run herdr tab create --cwd $PWD --label "orc: $repo" --no-focus); or begin
+            __orc_fail 'tab create'; return 1
+        end
+        set focus_tab (printf '%s\n' $json | jq -r '.result.tab.tab_id')
+        set p1 (printf '%s\n' $json | jq -r '.result.root_pane.pane_id')
+        __orc_ok "tab created  $focus_tab"
 
-    set -l p2 (__orc_run herdr pane split --pane $p1 --direction right --ratio 0.5 --cwd $PWD --no-focus | jq -r '.result.pane.pane_id'); or begin
-        __orc_fail 'split right'; return 1
+        set p2 (__orc_run herdr pane split --pane $p1 --direction right --ratio 0.5 --cwd $PWD --no-focus | jq -r '.result.pane.pane_id'); or begin
+            __orc_fail 'split right'; return 1
+        end
+        set p3 (__orc_run herdr pane split --pane $p1 --direction down --ratio 0.5 --cwd $PWD --no-focus | jq -r '.result.pane.pane_id'); or begin
+            __orc_fail 'split down (left)'; return 1
+        end
+        set p4 (__orc_run herdr pane split --pane $p2 --direction down --ratio 0.5 --cwd $PWD --no-focus | jq -r '.result.pane.pane_id'); or begin
+            __orc_fail 'split down (right)'; return 1
+        end
+    else
+        # tabs mode: one tab per role; the tab's root pane hosts the agent
+        set -l panes
+        for role in fable opus codex hunk
+            set -l json (__orc_run herdr tab create --cwd $PWD --label "orc: $repo · $role" --no-focus); or begin
+                __orc_fail "tab create ($role)"; return 1
+            end
+            set -a panes (printf '%s\n' $json | jq -r '.result.root_pane.pane_id')
+            # focus lands back on the orchestrator so the user starts there
+            test $role = fable; and set focus_tab (printf '%s\n' $json | jq -r '.result.tab.tab_id')
+        end
+        set p1 $panes[1]; set p2 $panes[2]; set p3 $panes[3]; set p4 $panes[4]
     end
-    set -l p3 (__orc_run herdr pane split --pane $p1 --direction down --ratio 0.5 --cwd $PWD --no-focus | jq -r '.result.pane.pane_id'); or begin
-        __orc_fail 'split down (left)'; return 1
-    end
-    set -l p4 (__orc_run herdr pane split --pane $p2 --direction down --ratio 0.5 --cwd $PWD --no-focus | jq -r '.result.pane.pane_id'); or begin
-        __orc_fail 'split down (right)'; return 1
-    end
+
     herdr pane rename $p1 $name_fable >/dev/null
     herdr pane rename $p2 $name_opus >/dev/null
     herdr pane rename $p3 $name_codex >/dev/null
     herdr pane rename $p4 $name_hunk >/dev/null
-    __orc_ok 'panes split  4/4'
+    if test $layout = grid
+        __orc_ok 'panes split  4/4'
+    else
+        __orc_ok 'tabs created  4/4'
+    end
 
     # ---- launch ------------------------------------------------------------
     set -l claude_fable --model fable --effort high $argv
-    set -l claude_opus --model opus --effort high $argv
+    # medium effort: the coder runs many short, well-scoped units; high was
+    # slower without better output
+    set -l claude_opus --model opus --effort medium $argv
     set -l codex_args -m gpt-5.6-sol -c model_reasoning_effort=high
 
     __orc_run herdr agent start $name_fable --kind claude --pane $p1 --timeout 60000 -- $claude_fable >/dev/null; or begin
@@ -128,7 +176,7 @@ function orc --description 'Open a 2×2 herdr tab: claude fable, claude opus, co
     __orc_ok "$name_hunk  hunk diff --watch"
 
     # ---- finish ------------------------------------------------------------
-    herdr tab focus $tab_id >/dev/null
+    herdr tab focus $focus_tab >/dev/null
     set -l secs (math (date +%s) - $started)
     set_color --bold; echo -n "done in $secs"s; set_color normal
     echo " → herdr agent prompt $name_fable \"...\""
