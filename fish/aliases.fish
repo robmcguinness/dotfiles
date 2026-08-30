@@ -6,6 +6,8 @@ alias ..4='cd ../../../..'
 
 alias c="clear"
 
+alias npx="pnx"
+
 # Enhanced eza
 alias l='eza -la --icons --git'
 alias ll='eza -l --icons --git'
@@ -26,12 +28,11 @@ alias gurls='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && git config 
 # iterate through all git repos and run `git pull`
 alias gua='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
 
-alias cm="clean-mark"
-
 alias tower="gittower"
 
 alias ci='code-insiders'
 alias cc='claude'
+alias co='codium'
 
 # Modern tool aliases
 alias cat='bat'
@@ -50,10 +51,3 @@ alias reload='source ~/.config/fish/config.fish'
 alias ports='lsof -iTCP -sTCP:LISTEN -n -P'
 alias localip='ipconfig getifaddr en0'
 alias pubip='curl -s ifconfig.me'
-
-# Docker
-alias dk='docker'
-alias dkc='docker compose'
-alias dkps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
-
-alias co='codium'

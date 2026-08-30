@@ -6,7 +6,7 @@ set -x HOMEBREW_NO_UPDATE_REPORT_FORMULAE 1
 set -x HOMEBREW_NO_UPDATE_REPORT_CASKS 1
 set -x HOMEBREW_NO_ENV_HINTS 1
 
-fish_add_path $HOME/Dev/homebrew/bin $HOME/Dev/homebrew/sbin /usr/local/bin $HOME/.cargo/env $HOME/.local/bin $PNPM_HOME/bin
+fish_add_path $HOME/Dev/homebrew/bin $HOME/Dev/homebrew/sbin /usr/local/bin $HOME/.cargo/bin $HOME/.local/bin $PNPM_HOME/bin
 
 . ~/.config/fish/aliases.fish
 
