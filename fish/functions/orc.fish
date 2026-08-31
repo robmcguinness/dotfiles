@@ -149,7 +149,11 @@ function orc --description 'Open a herdr orc layout: claude fable, claude opus, 
     # medium effort: the coder runs many short, well-scoped units; high was
     # slower without better output
     set -l claude_opus --model opus --effort medium $argv
-    set -l codex_args -m gpt-5.6-sol -c model_reasoning_effort=high
+    # hunk's session CLI reaches the daemon over loopback HTTP (127.0.0.1); codex's
+    # default workspace-write sandbox denies all network, so without this the reviewer
+    # sees "No active Hunk sessions" for a session that is plainly alive.
+    set -l codex_args -m gpt-5.6-sol -c model_reasoning_effort=high \
+        -c sandbox_workspace_write.network_access=true
 
     __orc_run herdr agent start $name_fable --kind claude --pane $p1 --timeout 60000 -- $claude_fable >/dev/null; or begin
         __orc_fail "$name_fable  claude $claude_fable"; return 1
