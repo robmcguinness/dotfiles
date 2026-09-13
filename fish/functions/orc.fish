@@ -128,7 +128,7 @@ function orc --description 'Open a herdr orc layout: orchestrator, coder, review
     set -l orc_efforts low medium high
     # first-run picker defaults, matching the old hard-coded behavior
     set -l orc_default_models claude-fable-5-1 claude-opus-5 gpt-5.6-sol
-    set -l orc_default_efforts high medium high
+    set -l orc_default_efforts high medium medium
 
     set -l i 0
     for role in $orc_roles
@@ -158,6 +158,13 @@ function orc --description 'Open a herdr orc layout: orchestrator, coder, review
             end
             set -U $evar $pick
         end
+    end
+
+    # A reviewer on the coder's model shares its blind spots: three clean reviews
+    # then say nothing. Warn, do not block; the user picked it.
+    if test "$orc_reviewer_model" = "$orc_coder_model"
+        set_color yellow; echo -n '  ⚠ '; set_color normal
+        echo "coder and reviewer both run $orc_coder_model; a same-model review cannot catch shared blind spots (orc --select to change)"
     end
 
     # kind + launch args per role, derived from the model prefix
