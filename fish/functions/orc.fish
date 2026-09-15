@@ -124,7 +124,7 @@ function orc --description 'Open a herdr orc layout: orchestrator, coder, review
     # ---- model / effort selection ------------------------------------------
     set -l orc_roles orch coder reviewer
     set -l orc_models gpt-6-astra gpt-5.6-sol gpt-5.6-terra gpt-5.6-luna \
-        claude-fable-5-1 claude-opus-5 claude-haiku-4-5 claude-sonnet-5
+        claude-fable-5-1 claude-opus-5 claude-opus-4-8 claude-haiku-4-5 claude-sonnet-5
     set -l orc_efforts low medium high
     # first-run picker defaults, matching the old hard-coded behavior
     set -l orc_default_models claude-fable-5-1 claude-opus-5 gpt-5.6-sol
